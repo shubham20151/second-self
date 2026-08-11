@@ -1,0 +1,6 @@
+streamlit==1.38.0
+sentence-transformers==3.0.1
+streamlit-agraph==0.0.45
+groq==0.11.0
+networkx==3.3
+python-dotenv==1.0.1
