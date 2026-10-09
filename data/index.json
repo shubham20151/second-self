@@ -1,0 +1,18 @@
+{
+  "raw_processed": {
+    "2026-08-12_00215da8": true,
+    "2026-08-12_2952fe63": true,
+    "2026-08-12_350e789b": true,
+    "2026-08-12_a3c03fde": true,
+    "2026-08-12_0efbe6b3": true,
+    "2026-08-12_03d33ebc": true,
+    "2026-08-12_0332cf05": true,
+    "2026-08-12_173ca507": true,
+    "2026-08-12_196ca91a": true,
+    "2026-08-12_39d7149d": true,
+    "2026-08-12_76c0d0aa": true,
+    "2026-08-12_d3ecfb0c": true
+  },
+  "embeddings_version": "all-MiniLM-L6-v2",
+  "last_graph_build": "2026-08-12T17:43:23Z"
+}

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecondSelf Knowledge Graph</title>
+    <!-- Modern Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+    <!-- vis-network library -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #0B0F19;
+            --text-color: #E2E8F0;
+            --font-main: 'Inter', sans-serif;
+            --font-heading: 'Outfit', sans-serif;
+            
+            /* PARA Colors */
+            --color-project: #06B6D4; /* Cyan */
+            --color-area: #A855F7;    /* Purple */
+            --color-resource: #10B981;/* Emerald */
+            --color-archive: #64748B; /* Slate */
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            padding: 20px 30px;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10;
+        }
+        
+        h1 {
+            margin: 0;
+            font-family: var(--font-heading);
+            font-size: 24px;
+            background: linear-gradient(135deg, #38BDF8, #818CF8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .stats {
+            font-size: 14px;
+            color: #94A3B8;
+            font-weight: 500;
+        }
+
+        #mynetwork {
+            flex-grow: 1;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, #1E293B 0%, #0B0F19 100%);
+        }
+        
+        /* Custom Tooltip using Glassmorphism */
+        .vis-tooltip {
+            position: absolute;
+            background: rgba(15, 23, 42, 0.85) !important;
+            backdrop-filter: blur(16px) !important;
+            -webkit-backdrop-filter: blur(16px) !important;
+            border: 1px solid rgba(255, 255, 255, 0.15) !important;
+            border-radius: 12px !important;
+            padding: 16px !important;
+            font-family: var(--font-main) !important;
+            color: #F8FAFC !important;
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5) !important;
+            max-width: 320px !important;
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+            transform: translateY(5px);
+            z-index: 9999;
+        }
+        
+        .tooltip-title {
+            font-family: var(--font-heading);
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #38BDF8;
+        }
+        
+        .tooltip-para {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            display: inline-block;
+            font-weight: 600;
+        }
+        
+        .tooltip-content {
+            font-size: 13px;
+            line-height: 1.5;
+            color: #CBD5E1;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 12px;
+        }
+        
+        .para-Projects { background: rgba(6, 182, 212, 0.2); color: var(--color-project); }
+        .para-Areas { background: rgba(168, 85, 247, 0.2); color: var(--color-area); }
+        .para-Resources { background: rgba(16, 185, 129, 0.2); color: var(--color-resource); }
+        .para-Archives { background: rgba(100, 116, 139, 0.2); color: var(--color-archive); }
+        
+        /* Floating controls */
+        .controls {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 12px;
+            display: flex;
+            gap: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>SecondSelf Brain</h1>
+        <div class="stats" id="stats">Loading Graph...</div>
+    </header>
+
+    <div id="mynetwork"></div>
+
+    <div class="controls">
+        <div class="legend-item"><div class="legend-color" style="background: var(--color-project); box-shadow: 0 0 10px var(--color-project);"></div> Projects</div>
+        <div class="legend-item"><div class="legend-color" style="background: var(--color-area); box-shadow: 0 0 10px var(--color-area);"></div> Areas</div>
+        <div class="legend-item"><div class="legend-color" style="background: var(--color-resource); box-shadow: 0 0 10px var(--color-resource);"></div> Resources</div>
+        <div class="legend-item"><div class="legend-color" style="background: var(--color-archive);"></div> Archives</div>
+    </div>
+
+    <script>
+        const colors = {
+            'Projects': {
+                border: '#0891B2', background: '#06B6D4',
+                highlight: { border: '#06b6d4', background: '#22d3ee' },
+                hover: { border: '#06b6d4', background: '#22d3ee' }
+            },
+            'Areas': {
+                border: '#9333EA', background: '#A855F7',
+                highlight: { border: '#a855f7', background: '#c084fc' },
+                hover: { border: '#a855f7', background: '#c084fc' }
+            },
+            'Resources': {
+                border: '#059669', background: '#10B981',
+                highlight: { border: '#10b981', background: '#34d399' },
+                hover: { border: '#10b981', background: '#34d399' }
+            },
+            'Archives': {
+                border: '#475569', background: '#64748B',
+                highlight: { border: '#64748b', background: '#94a3b8' },
+                hover: { border: '#64748b', background: '#94a3b8' }
+            }
+        };
+
+        async function initGraph() {
+            try {
+                // Read injected data directly
+                const data = GRAPH_JSON_DATA;
+                
+                document.getElementById('stats').innerText = 
+                    `${data.metadata.node_count} Notes • ${data.metadata.edge_count} Connections`;
+
+                // Format nodes for vis.js
+                const nodes = new vis.DataSet(data.nodes.map(n => {
+                    const colorSet = colors[n.group] || colors['Archives'];
+                    return {
+                        id: n.id,
+                        label: n.label.length > 25 ? n.label.substring(0, 25) + '...' : n.label,
+                        title: `
+                            <div class="tooltip-title">${n.label}</div>
+                            <div class="tooltip-para para-${n.group}">${n.group}</div>
+                            <div class="tooltip-content">${n.content_preview}</div>
+                        `,
+                        color: colorSet,
+                        font: { color: '#ffffff', face: 'Inter', size: 14, strokeWidth: 2, strokeColor: '#0B0F19' },
+                        shape: 'dot',
+                        size: n.group === 'Projects' ? 24 : (n.group === 'Areas' ? 20 : 16),
+                        shadow: { enabled: true, color: colorSet.background, size: 15, x: 0, y: 0 }
+                    };
+                }));
+
+                // Format edges for vis.js
+                const edges = new vis.DataSet(data.edges.map(e => ({
+                    from: e.source,
+                    to: e.target,
+                    color: { color: 'rgba(255,255,255,0.15)', highlight: '#38BDF8', hover: '#38BDF8' },
+                    width: 1.5,
+                    smooth: { type: 'continuous' }
+                })));
+
+                const container = document.getElementById('mynetwork');
+                const networkData = { nodes: nodes, edges: edges };
+                
+                const options = {
+                    physics: {
+                        barnesHut: { gravitationalConstant: -8000, springLength: 150, springConstant: 0.04 },
+                        stabilization: { iterations: 200 }
+                    },
+                    interaction: {
+                        hover: true,
+                        tooltipDelay: 100,
+                        zoomView: true,
+                        dragView: true
+                    }
+                };
+
+                const network = new vis.Network(container, networkData, options);
+
+            } catch (error) {
+                document.getElementById('stats').innerText = "Error loading graph data";
+                console.error(error);
+            }
+        }
+
+        window.onload = initGraph;
+    </script>
+</body>
+</html>
