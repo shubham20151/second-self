@@ -1,0 +1,195 @@
+{
+  "nodes": [
+    {
+      "id": "0efbe6b3",
+      "label": "Request for 1000 rupees",
+      "para": "Archives",
+      "tags": [
+        "transaction",
+        "request"
+      ],
+      "summary": "Request for 1000 rupees",
+      "content_preview": "kam give me 1000 rupay",
+      "group": "Archives"
+    },
+    {
+      "id": "a3c03fde",
+      "label": "Personal identification information",
+      "para": "Archives",
+      "tags": [],
+      "summary": "Personal identification information",
+      "content_preview": "my name is shubham",
+      "group": "Archives"
+    },
+    {
+      "id": "76c0d0aa",
+      "label": "Daily routine completion",
+      "para": "Areas",
+      "tags": [
+        "homework",
+        "school",
+        "routine"
+      ],
+      "summary": "Daily routine completion",
+      "content_preview": "sunday i complete my homework",
+      "group": "Areas"
+    },
+    {
+      "id": "00215da8",
+      "label": "Research knowledge graphs for SecondSelf project",
+      "para": "Projects",
+      "tags": [
+        "SecondSelf",
+        "Knowledge Graphs"
+      ],
+      "summary": "Research knowledge graphs for SecondSelf project",
+      "content_preview": "I need to look into knowledge graphs for SecondSelf.",
+      "group": "Projects"
+    },
+    {
+      "id": "0332cf05",
+      "label": "Complete homework on Sunday",
+      "para": "Projects",
+      "tags": [
+        "homework",
+        "schoolwork",
+        "tasks"
+      ],
+      "summary": "Complete homework on Sunday",
+      "content_preview": "sunday i complete my homework  Related: [[173ca507]]  Related: [[39d7149d]]  Related: [[d3ecfb0c]]",
+      "group": "Projects"
+    },
+    {
+      "id": "173ca507",
+      "label": "Complete homework on Sunday",
+      "para": "Projects",
+      "tags": [
+        "homework",
+        "schoolwork",
+        "tasks"
+      ],
+      "summary": "Complete homework on Sunday",
+      "content_preview": "sunday i complete my homework  Related: [[0332cf05]]  Related: [[196ca91a]]  Related: [[39d7149d]]",
+      "group": "Projects"
+    },
+    {
+      "id": "196ca91a",
+      "label": "Completed homework on Monday",
+      "para": "Projects",
+      "tags": [
+        "homework",
+        "schoolwork",
+        "productivity"
+      ],
+      "summary": "Completed homework on Monday",
+      "content_preview": "monday i complete my homework  Related: [[173ca507]]  Related: [[39d7149d]]",
+      "group": "Projects"
+    },
+    {
+      "id": "2952fe63",
+      "label": "Personal project repository hosted on GitHub",
+      "para": "Projects",
+      "tags": [
+        "github",
+        "project",
+        "repo"
+      ],
+      "summary": "Personal project repository hosted on GitHub",
+      "content_preview": "https://github.com/shubham20151/second-self  Repo for my project",
+      "group": "Projects"
+    },
+    {
+      "id": "39d7149d",
+      "label": "Completed homework on Sunday",
+      "para": "Projects",
+      "tags": [
+        "homework",
+        "schoolwork",
+        "productivity"
+      ],
+      "summary": "Completed homework on Sunday",
+      "content_preview": "sunday i complete my homework  Related: [[173ca507]]  Related: [[0332cf05]]  Related: [[196ca91a]]",
+      "group": "Projects"
+    },
+    {
+      "id": "d3ecfb0c",
+      "label": "Complete homework on Sunday",
+      "para": "Projects",
+      "tags": [
+        "homework",
+        "schoolwork",
+        "tasks"
+      ],
+      "summary": "Complete homework on Sunday",
+      "content_preview": "sunday i complete my homework  Related: [[0332cf05]]",
+      "group": "Projects"
+    },
+    {
+      "id": "03d33ebc",
+      "label": "A link to a YouTube video on Masai Live",
+      "para": "Resources",
+      "tags": [
+        "youtube",
+        "link",
+        "masai-live"
+      ],
+      "summary": "A link to a YouTube video on Masai Live",
+      "content_preview": "https://masai-live.masaischool.com/cd/afnFk0_Po9vgQKzf/session/akeeAZiFm3TFUWD1?pl=akecyZiFm3TFUWCn&tab=resources  kam youtube link",
+      "group": "Resources"
+    },
+    {
+      "id": "350e789b",
+      "label": "A specific amount of money",
+      "para": "Resources",
+      "tags": [
+        "10000 rupay"
+      ],
+      "summary": "A specific amount of money",
+      "content_preview": "i have the 10000 rupay",
+      "group": "Resources"
+    }
+  ],
+  "edges": [
+    {
+      "source": "0332cf05",
+      "target": "173ca507",
+      "weight": 1.0,
+      "type": "related"
+    },
+    {
+      "source": "0332cf05",
+      "target": "39d7149d",
+      "weight": 1.0,
+      "type": "related"
+    },
+    {
+      "source": "0332cf05",
+      "target": "d3ecfb0c",
+      "weight": 1.0,
+      "type": "related"
+    },
+    {
+      "source": "173ca507",
+      "target": "196ca91a",
+      "weight": 1.0,
+      "type": "related"
+    },
+    {
+      "source": "173ca507",
+      "target": "39d7149d",
+      "weight": 1.0,
+      "type": "related"
+    },
+    {
+      "source": "196ca91a",
+      "target": "39d7149d",
+      "weight": 1.0,
+      "type": "related"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-08-12T17:43:23Z",
+    "node_count": 12,
+    "edge_count": 6
+  }
+}
