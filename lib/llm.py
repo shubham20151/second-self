@@ -6,16 +6,29 @@ from groq import Groq
 
 load_dotenv()
 
-# We only initialize if the key is present and not a dummy
-api_key = os.environ.get("GROQ_API_KEY")
-if api_key and api_key != "your_groq_api_key_here":
-    client = Groq(api_key=api_key)
-else:
-    client = None
+# Lazy-loaded client — reads key at call time so Streamlit Cloud secrets work
+_client = None
+
+def _get_client():
+    global _client
+    if _client is None:
+        # Try os.environ first (works for both .env and Streamlit secrets)
+        api_key = os.environ.get("GROQ_API_KEY")
+        # Fallback: try st.secrets if running inside Streamlit
+        if not api_key:
+            try:
+                import streamlit as st
+                api_key = st.secrets.get("GROQ_API_KEY")
+            except Exception:
+                pass
+        if api_key and api_key != "your_groq_api_key_here":
+            _client = Groq(api_key=api_key)
+        else:
+            raise Exception("GROQ_API_KEY is missing or invalid. Please set it in .env or Streamlit Secrets.")
+    return _client
 
 def call_llm(prompt: str, system: str = "", retries: int = 3, response_format: str = "text") -> str:
-    if not client:
-        raise Exception("GROQ_API_KEY is missing or invalid.")
+    client = _get_client()
         
     messages = []
     if system:
