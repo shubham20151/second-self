@@ -27,8 +27,54 @@ def _get_client():
             raise Exception("GROQ_API_KEY is missing or invalid. Please set it in .env or Streamlit Secrets.")
     return _client
 
+_selected_model = None
+
+def _get_model(client) -> str:
+    global _selected_model
+    if _selected_model:
+        return _selected_model
+
+    # Check env or Streamlit secrets
+    env_model = os.environ.get("GROQ_MODEL")
+    if not env_model:
+        try:
+            import streamlit as st
+            env_model = st.secrets.get("GROQ_MODEL")
+        except Exception:
+            pass
+
+    if env_model:
+        _selected_model = env_model
+        return _selected_model
+
+    # Candidates in preference order
+    candidates = [
+        "openai/gpt-oss-20b",
+        "qwen/qwen3.8-27b",
+        "openai/gpt-oss-120b",
+        "llama-3.3-70b-versatile",
+        "llama-3.1-8b-instant",
+    ]
+
+    try:
+        available_models = [m.id for m in client.models.list().data]
+        for c in candidates:
+            if c in available_models:
+                _selected_model = c
+                return _selected_model
+        for m in available_models:
+            if not any(skip in m for skip in ["whisper", "guard", "audio"]):
+                _selected_model = m
+                return _selected_model
+    except Exception:
+        pass
+
+    _selected_model = "openai/gpt-oss-20b"
+    return _selected_model
+
 def call_llm(prompt: str, system: str = "", retries: int = 3, response_format: str = "text") -> str:
     client = _get_client()
+    model = _get_model(client)
         
     messages = []
     if system:
@@ -39,7 +85,7 @@ def call_llm(prompt: str, system: str = "", retries: int = 3, response_format: s
         try:
             kwargs = {
                 "messages": messages,
-                "model": "llama-3.1-8b-instant",
+                "model": model,
                 "temperature": 0.1,
             }
             if response_format == "json":
@@ -51,6 +97,7 @@ def call_llm(prompt: str, system: str = "", retries: int = 3, response_format: s
             if attempt == retries - 1:
                 raise e
             time.sleep(1)
+
 
 def classify_content(text: str) -> dict:
     prompt = f"""You are an AI assistant that organizes notes using the PARA method.
@@ -85,4 +132,4 @@ Question: {question}
         return call_llm(prompt, system="You are an expert assistant.", response_format="text")
     except Exception as e:
         print(f"LLM Synthesis error: {e}")
-        return "I encountered an error trying to synthesize an answer."
+        return f"I encountered an error trying to synthesize an answer: {e}"
