@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary-container":"#00452e","on-primary-fixed-variant":"#004e5c","primary":"#4cd7f6","on-secondary-container":"#b0b2ff","on-secondary-fixed":"#07006c","inverse-on-surface":"#2d3038","surface-dim":"#10131a","surface-container":"#1d1f27","inverse-primary":"#00687a","on-surface":"#e1e2ec","on-tertiary":"#003824","secondary":"#c0c1ff","on-tertiary-fixed-variant":"#005236","on-primary-container":"#00424f","surface":"#10131a","on-primary-fixed":"#001f26","tertiary-fixed-dim":"#4edea3","secondary-fixed":"#e1e0ff","inverse-surface":"#e1e2ec","surface-container-high":"#272a32","surface-bright":"#363941","tertiary-fixed":"#6ffbbe","surface-container-low":"#191b23","on-surface-variant":"#bcc9cd","background":"#10131a","on-background":"#e1e2ec","secondary-container":"#3131c0","on-tertiary-fixed":"#002113","on-secondary":"#1000a9","surface-tint":"#4cd7f6","secondary-fixed-dim":"#c0c1ff","tertiary":"#4edea3","error":"#ffb4ab","on-error":"#690005","outline-variant":"#3d494c","on-secondary-fixed-variant":"#2f2ebe","surface-container-highest":"#32353d","primary-fixed-dim":"#4cd7f6","error-container":"#93000a","on-primary":"#003640","surface-variant":"#32353d","surface-container-lowest":"#0b0e15","outline":"#869397","tertiary-container":"#1bbd85","on-error-container":"#ffdad6","primary-container":"#06b6d4","primary-fixed":"#acedff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"1rem","margin-desktop":"2rem","gutter":"1rem","space-xs":"0.25rem","space-md":"1rem","space-xl":"2.5rem","gutter-desktop":"1.5rem","space-lg":"1.5rem","space-sm":"0.5rem"},"fontFamily":{"label-sm":["JetBrains Mono"],"body-lg":["JetBrains Mono"],"body-sm":["JetBrains Mono"],"headline-md":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-md":["JetBrains Mono"],"display-lg-mobile":["Space Grotesk"],"display-lg":["Space Grotesk"],"code-block":["JetBrains Mono"],"body-md":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"]},"fontSize":{"label-sm":["0.6875rem",{"lineHeight":"1.15","letterSpacing":"0.08em","fontWeight":"500"}],"body-lg":["0.9375rem",{"lineHeight":"1.6","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1.45","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["1.375rem",{"lineHeight":"1.3","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["1.125rem",{"lineHeight":"1.4","letterSpacing":"-0.01em","fontWeight":"500"}],"label-md":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"500"}],"display-lg-mobile":["2rem",{"lineHeight":"1.15","letterSpacing":"-0.03em","fontWeight":"700"}],"display-lg":["3rem",{"lineHeight":"1.1","letterSpacing":"-0.04em","fontWeight":"700"}],"code-block":["0.8125rem",{"lineHeight":"1.65","letterSpacing":"0em","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.5","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["2rem",{"lineHeight":"1.2","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"1.25","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="SecondSelf Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XUacmOpRtYD06knDdSYzWgmCVEQIQuJXh-5KrlOfeRsj8rezik-7nUIi02qkPRcIPWsVUpOL2yfuJAsbO4Mczmllbvp90ON9V_2mydPRLDvIa8o2GyzfajPNynFxpo3lW7AJAuGrnQ8PPPdI3ElH8LLsMcjnsz5gfh6IgHbk8zn_9ZTgu1e8hBfVEwrUIbqddUOtIEPPcHF_7ue6hyP2JG7_ESg8uycCt7KNuDMTeM8ckLH9kcXA7A37w"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">SecondSelf</span><span class="font-label-sm text-label-sm text-primary tracking-widest mt-1 uppercase">Cortex Node</span></div></div><span class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">v2.4 Local</span></div><div class="px-space-md py-space-sm"><div class="font-label-sm text-label-sm text-outline uppercase tracking-widest px-space-xs py-space-xs">Cognitive Index</div></div><nav class="flex flex-col px-space-sm gap-space-xs" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary"><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md uppercase tracking-wider" data-path="knowledge-graph" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Knowledge Graph</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md uppercase tracking-wider" data-path="ask-your-brain" href="#"><span class="material-symbols-outlined text-[18px]">psychology_alt</span><span>Ask Your Brain</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md uppercase tracking-wider" data-path="capture-and-pipeline" href="#"><span class="material-symbols-outlined text-[18px]">input_circle</span><span>Capture &amp; Pipeline</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors font-label-md uppercase tracking-wider bg-surface-container-high text-primary border-l-2 border-primary" data-path="para-organization" href="#"><span class="material-symbols-outlined text-[18px]">folder_data</span><span>PARA Organization</span></a></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Vector Engine</span><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 bg-tertiary"></span><span class="font-label-sm text-label-sm text-tertiary">ChromaDB Active</span></div></div><div class="flex flex-col gap-1"><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Vault Storage</span><span class="text-on-surface">1,420 items · 48.2MB</span></div><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Memory Synced</span><span class="text-primary">99.4%</span></div></div><div class="w-full bg-surface-container-highest h-1"><div class="bg-primary h-1 w-[99.4%]"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-low/95 backdrop-blur-md z-40 px-space-lg flex items-center justify-between select-none"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-2 w-full text-on-surface-variant"><span class="material-symbols-outlined text-outline text-[18px]">terminal</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface w-full placeholder:text-outline cursor-pointer" placeholder="&gt; ⌘K Search cognitive cortex or input stream..." readonly="" type="text"/><span class="font-label-sm text-label-sm bg-surface-container-high px-1.5 py-0.5 text-outline">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs bg-surface-container px-space-sm py-1 font-label-sm text-label-sm"><span class="w-1.5 h-1.5 bg-tertiary"></span><span class="text-on-surface-variant">Pipeline Idle · Ready</span></div><button class="px-space-md py-2 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider font-semibold flex items-center gap-space-xs hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>Quick Note</span></button><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<section class="relative bg-surface-container-low px-margin-desktop py-space-lg flex flex-col gap-space-lg overflow-hidden">
+<div class="absolute right-0 top-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+<div class="absolute left-1/3 bottom-0 w-64 h-64 bg-tertiary/5 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md z-10">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest">
+<span class="w-2 h-2 bg-primary"></span>
+<span>Cortex Subsystem 04 // Taxonomy</span>
+<span class="text-outline">/</span>
+<span class="text-tertiary">Real-Time Routing Engaged</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">PARA Knowledge Architecture</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Automated AI classification organizing your second brain into actionable tiers.</p>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs z-10">
+<button class="px-space-md py-2 bg-surface-container-high text-on-surface hover:bg-surface-bright transition-colors font-label-md text-label-md uppercase tracking-wider flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">file_upload</span>
+<span>Export Vault</span>
+</button>
+<button class="px-space-md py-2 bg-surface-container-high text-primary hover:bg-surface-bright transition-colors font-label-md text-label-md uppercase tracking-wider flex items-center gap-space-xs" id="rebalanceBtn">
+<span class="material-symbols-outlined text-[16px] animate-spin" id="syncSpinner" style="display:none;">sync</span>
+<span class="material-symbols-outlined text-[16px]" id="syncStatic">auto_fix_high</span>
+<span>Auto-Rebalance Categories</span>
+</button>
+<button class="px-space-md py-2 bg-primary text-on-primary hover:bg-primary-fixed transition-colors font-label-md text-label-md uppercase tracking-wider font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>New Note</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md z-10">
+<div class="bg-surface-container p-space-md relative flex flex-col justify-between group hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-tertiary"></span> Projects
+            </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-on-tertiary-container text-tertiary">Tier 01</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight mt-1">14</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Active goals &amp; deliverables</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-tertiary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">alarm</span> 3 finishing this week</span>
+<span class="text-outline">89% on-track</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md relative flex flex-col justify-between group hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-fixed"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-secondary-fixed"></span> Areas
+            </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-secondary-container text-secondary">Tier 02</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight mt-1">08</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Ongoing responsibilities &amp; standards</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">verified</span> 8 active maintenance</span>
+<span class="text-outline">100% stable</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md relative flex flex-col justify-between group hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-primary"></span> Resources
+            </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-on-primary-container text-primary">Tier 03</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight mt-1">48</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Topics &amp; assets of interest</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">hub</span> 48 curated resources</span>
+<span class="text-outline">192 embeddings</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-md relative flex flex-col justify-between group hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest flex items-center gap-1">
+<span class="w-1.5 h-1.5 bg-secondary"></span> Archives
+            </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-secondary-fixed-dim">Tier 04</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight mt-1">32</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Inactive items preserved for semantic search</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-on-surface-variant flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">archive</span> 32 indexed memory capsules</span>
+<span class="text-outline">ChromaDB Cold</span>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-surface-container-low px-margin-desktop py-space-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm select-none">
+<div class="flex flex-wrap items-center gap-space-sm flex-1">
+<div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-1.5 flex-1 min-w-[240px] max-w-md">
+<span class="material-symbols-outlined text-outline text-[16px]">filter_alt</span>
+<input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface w-full placeholder:text-outline" id="filterInput" placeholder="Filter notes by tag, title, or semantic similarity..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sell</span>
+<span>Tags: All</span>
+<span class="material-symbols-outlined text-[12px]">expand_more</span>
+</button>
+<button class="px-space-sm py-1.5 bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span>Connections &gt; 3</span>
+</button>
+<button class="px-space-sm py-1.5 bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-container-high flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Recent 7d</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end lg:self-center">
+<div class="flex bg-surface-container-lowest p-0.5">
+<button class="px-space-sm py-1 bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-1" id="viewKanbanBtn">
+<span class="material-symbols-outlined text-[14px]">view_column</span>
+<span class="hidden sm:inline">Kanban Tier View</span>
+</button>
+<button class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1" id="viewListBtn">
+<span class="material-symbols-outlined text-[14px]">format_list_bulleted</span>
+<span class="hidden sm:inline">List View</span>
+</button>
+<button class="px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1" id="viewTableBtn">
+<span class="material-symbols-outlined text-[14px]">table_chart</span>
+<span class="hidden sm:inline">Compact Table View</span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-space-md grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<div class="xl:col-span-8 flex flex-col gap-space-md" id="explorerContainer">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md" id="kanbanBoard">
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">1. Projects</span>
+</div>
+<span class="font-label-sm text-label-sm bg-on-tertiary-container text-tertiary px-1.5 py-0.5">3 VISIBLE</span>
+</div>
+<div class="flex flex-col gap-space-sm min-h-[500px]" data-tier="projects">
+<article class="note-card bg-surface-container p-space-md flex flex-col gap-space-xs cursor-pointer hover:bg-surface-container-high transition-colors relative group" data-id="note-1">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">psychology</span> 98% AI Project
+                </span>
+<span class="font-label-sm text-label-sm text-outline">12m ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-medium group-hover:text-primary transition-colors">Autonomous Agent System Architecture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Decentralized agent swarms interacting via vector memory state graphs with asynchronous tool calling.</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#agents</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#memory</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#rag</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs text-outline font-label-sm text-label-sm">
+<span class="text-tertiary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 7 connections</span>
+<span>2,480 words</span>
+</div>
+</article>
+<article class="note-card bg-surface-container p-space-md flex flex-col gap-space-xs cursor-pointer hover:bg-surface-container-high transition-colors relative group" data-id="note-2">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">psychology</span> 94% AI Project
+                </span>
+<span class="font-label-sm text-label-sm text-outline">4h ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-medium group-hover:text-primary transition-colors">Q2 High-Throughput ChromaDB Migration</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Benchmarking 1536-dim vs 768-dim embeddings across 40k local Markdown notes for sub-15ms queries.</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#vectors</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#infra</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs text-outline font-label-sm text-label-sm">
+<span class="text-tertiary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 12 connections</span>
+<span>1,190 words</span>
+</div>
+</article>
+<article class="note-card bg-surface-container p-space-md flex flex-col gap-space-xs cursor-pointer hover:bg-surface-container-high transition-colors relative group" data-id="note-3">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">psychology</span> 91% AI Project
+                </span>
+<span class="font-label-sm text-label-sm text-outline">1d ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-medium group-hover:text-primary transition-colors">SecondSelf Mobile Terminal UI MVP</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Designing touch-first tactical telemetry inputs and offline synchronization protocols.</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#interface</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#ux</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs text-outline font-label-sm text-label-sm">
+<span class="text-tertiary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 5 connections</span>
+<span>940 words</span>
+</div>
+</article>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-secondary-fixed"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">2. Areas</span>
+</div>
+<span class="font-label-sm text-label-sm bg-secondary-container text-secondary px-1.5 py-0.5">2 VISIBLE</span>
+</div>
+<div class="flex flex-col gap-space-sm min-h-[500px]" data-tier="areas">
+<article class="note-card bg-surface-container p-space-md flex flex-col gap-space-xs cursor-pointer hover:bg-surface-container-high transition-colors relative group" data-id="note-4">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-fixed"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">psychology</span> 96% AI Area
+                </span>
+<span class="font-label-sm text-label-sm text-outline">2d ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-medium group-hover:text-secondary transition-colors">Cognitive Biohacking &amp; Sleep Architecture</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Daily protocol metrics for deep slow-wave latency optimization and nootropic cycling standards.</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-secondary">#health</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-secondary">#habits</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs text-outline font-label-sm text-label-sm">
+<span class="text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 9 connections</span>
+<span>3,210 words</span>
+</div>
+</article>
+<article class="note-card bg-surface-container p-space-md flex flex-col gap-space-xs cursor-pointer hover:bg-surface-container-high transition-colors relative group" data-id="note-5">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary-fixed"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">psychology</span> 88% AI Area
+                </span>
+<span class="font-label-sm text-label-sm text-outline">3d ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-medium group-hover:text-secondary transition-colors">Personal Cloud &amp; Encryption Infrastructure</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Standard operating procedure for air-gapped backups, PGP signature verification, and ZFS replication.</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-secondary">#security</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-secondary">#ops</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs text-outline font-label-sm text-label-sm">
+<span class="text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 6 connections</span>
+<span>1,740 words</span>
+</div>
+</article>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">3. Resources</span>
+</div>
+<span class="font-label-sm text-label-sm bg-on-primary-container text-primary px-1.5 py-0.5">3 VISIBLE</span>
+</div>
+<div class="flex flex-col gap-space-sm min-h-[500px]" data-tier="resources">
+<article class="note-card bg-surface-container p-space-md flex flex-col gap-space-xs cursor-pointer hover:bg-surface-container-high transition-colors relative group" data-id="note-6">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">psychology</span> 99% AI Resource
+                </span>
+<span class="font-label-sm text-label-sm text-outline">5h ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-medium group-hover:text-primary transition-colors">Zettelkasten Graph Theory &amp; Epistemic Linkage</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Curated literature survey on nonlinear hypertext, bidirectionality, and Luhmann's slip-box methods.</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#pkm</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#theory</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs text-outline font-label-sm text-label-sm">
+<span class="text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 18 connections</span>
+<span>4,820 words</span>
+</div>
+</article>
+<article class="note-card bg-surface-container p-space-md flex flex-col gap-space-xs cursor-pointer hover:bg-surface-container-high transition-colors relative group" data-id="note-7">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">psychology</span> 93% AI Resource
+                </span>
+<span class="font-label-sm text-label-sm text-outline">6d ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-medium group-hover:text-primary transition-colors">Distributed Consensus in Heterogeneous Clusters</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Comparative breakdown of Raft, Paxos, and Byzantine Fault Tolerant protocol benchmarks under jitter.</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#distributed</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#consensus</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs text-outline font-label-sm text-label-sm">
+<span class="text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 4 connections</span>
+<span>2,100 words</span>
+</div>
+</article>
+<article class="note-card bg-surface-container p-space-md flex flex-col gap-space-xs cursor-pointer hover:bg-surface-container-high transition-colors relative group" data-id="note-8">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">psychology</span> 95% AI Resource
+                </span>
+<span class="font-label-sm text-label-sm text-outline">1w ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-medium group-hover:text-primary transition-colors">Transformer Latency Profiling Guide</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">FlashAttention-2 benchmarks across NVIDIA Ampere and Hopper architectures with KV cache quantization.</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#llm</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-primary">#cuda</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs text-outline font-label-sm text-label-sm">
+<span class="text-primary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 11 connections</span>
+<span>3,400 words</span>
+</div>
+</article>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-sm">
+<div class="flex items-center justify-between p-space-xs bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider font-semibold">4. Archives</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-highest text-secondary-fixed-dim px-1.5 py-0.5">2 VISIBLE</span>
+</div>
+<div class="flex flex-col gap-space-sm min-h-[500px]" data-tier="archives">
+<article class="note-card bg-surface-container p-space-md flex flex-col gap-space-xs cursor-pointer hover:bg-surface-container-high transition-colors relative group opacity-80 hover:opacity-100" data-id="note-9">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">archive</span> Archived (Finished)
+                </span>
+<span class="font-label-sm text-label-sm text-outline">2w ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-medium group-hover:text-secondary transition-colors">Q1 Legacy Database Decommissioning</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Complete execution logs, cold-storage snapshot hashes, and decommission post-mortem for old MongoDB instance.</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-outline">#retrospective</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-outline">#mongodb</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs text-outline font-label-sm text-label-sm">
+<span class="text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 3 connections</span>
+<span>890 words</span>
+</div>
+</article>
+<article class="note-card bg-surface-container p-space-md flex flex-col gap-space-xs cursor-pointer hover:bg-surface-container-high transition-colors relative group opacity-80 hover:opacity-100" data-id="note-10">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">archive</span> Archived (Deprecated)
+                </span>
+<span class="font-label-sm text-label-sm text-outline">1m ago</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight font-medium group-hover:text-secondary transition-colors">Old LangChain Experimental Chain Prototypes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Initial exploration scripts superseded by native lightweight local agent orchestration runtime.</p>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-outline">#deprecated</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 bg-surface-container-highest text-outline">#langchain</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs mt- space-xs text-outline font-label-sm text-label-sm">
+<span class="text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 2 connections</span>
+<span>1,410 words</span>
+</div>
+</article>
+</div>
+</div>
+</div>
+<div class="hidden flex-col gap-space-xs" id="listView">
+<div class="bg-surface-container-lowest p-space-sm flex items-center justify-between font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<span class="w-1/3">Title &amp; Classification</span>
+<span class="w-1/3">Tags &amp; Semantic Signals</span>
+<span class="w-1/6 text-right">Backlinks</span>
+<span class="w-1/6 text-right">Modified</span>
+</div>
+<div class="flex flex-col gap-1" id="listRows">
+</div>
+</div>
+</div>
+<aside class="xl:col-span-4 bg-surface-container flex flex-col gap-space-md p-space-md sticky top-20">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">terminal</span>
+<span class="font-label-md text-label-md text-on-surface uppercase tracking-wider font-semibold">Inspector // Live Preview</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" title="Open full markdown file">
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</button>
+<button class="p-1 hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface" title="Edit in Canvas">
+<span class="material-symbols-outlined text-[16px]">edit</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 font-label-sm text-label-sm bg-on-tertiary-container text-tertiary uppercase tracking-widest font-semibold" id="previewTierBadge">Tier 01 // Project</span>
+<span class="px-space-xs py-0.5 font-label-sm text-label-sm bg-surface-container-highest text-primary font-mono" id="previewConfidence">98% Auto-Routed</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight mt-1" id="previewTitle">Autonomous Agent System Architecture</h2>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<span id="previewMetaTime">Modified 12m ago</span>
+<span>·</span>
+<span id="previewMetaWords">2,480 words</span>
+<span>·</span>
+<span class="text-outline truncate" id="previewMetaPath">vault/projects/agents-core.md</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant uppercase tracking-wider">Classification Rebalancer</span>
+<button class="text-primary hover:underline uppercase" id="reclassifyTrigger">Override Tier &gt;</button>
+</div>
+<div class="flex gap-1 mt-1">
+<button class="tier-chip flex-1 py-1 font-label-sm text-label-sm bg-tertiary/10 text-tertiary text-center hover:bg-tertiary hover:text-on-tertiary transition-colors">PROJECT</button>
+<button class="tier-chip flex-1 py-1 font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant text-center hover:bg-secondary-fixed hover:text-surface transition-colors">AREA</button>
+<button class="tier-chip flex-1 py-1 font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant text-center hover:bg-primary hover:text-on-primary transition-colors">RESOURCE</button>
+<button class="tier-chip flex-1 py-1 font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant text-center hover:bg-secondary hover:text-on-secondary transition-colors">ARCHIVE</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs max-h-72 overflow-y-auto pr-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Markdown Ingestion Excerpt</span>
+<div class="font-code-block text-code-block text-on-surface-variant leading-relaxed bg-surface-container-lowest p-space-md flex flex-col gap-space-sm" id="previewContent">
+<p class="text-on-surface font-medium"># System Architecture: Agent Orchestration Engine</p>
+<p>The primary design goal is non-blocking actor synthesis via local vector embeddings. Nodes dynamically discover upstream artifacts using <span class="text-primary hover:underline cursor-pointer">[[Vector Retreival Graph]]</span> and trigger execution pipelines.</p>
+<div class="p-space-xs bg-surface-container-high font-mono text-[12px] text-tertiary">
+            state = SwarmState.initialize(vector_db="chroma_local")<br/>
+            state.subscribe_to_tier("Projects")
+          </div>
+<p>Key dependency established with <span class="text-primary hover:underline cursor-pointer">[[Q2 High-Throughput ChromaDB Migration]]</span> for high-dimensional low-latency indexing.</p>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">sync_alt</span>
+<span>Linked Mentions (Bi-directional)</span>
+</span>
+<span class="font-label-sm text-label-sm bg-surface-container-highest px-1.5 py-0.5 text-primary" id="linkedCountBadge">7 Backlinks</span>
+</div>
+<div class="flex flex-col gap-1" id="linkedMentionsList">
+<div class="p-space-xs bg-surface-container-lowest hover:bg-surface-container-high transition-colors cursor-pointer flex flex-col gap-0.5 group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary group-hover:underline">[[Q2 High-Throughput ChromaDB Migration]]</span>
+<span class="font-label-sm text-label-sm text-outline">similarity 0.94</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 italic">"...agents rely on zero-lag cosine calculations to maintain context graphs..."</p>
+</div>
+<div class="p-space-xs bg-surface-container-lowest hover:bg-surface-container-high transition-colors cursor-pointer flex flex-col gap-0.5 group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary group-hover:underline">[[Transformer Latency Profiling Guide]]</span>
+<span class="font-label-sm text-label-sm text-outline">similarity 0.89</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 italic">"...optimizing multi-token generation when agent swarm instances fan out..."</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">explore</span>
+<span>Unlinked Semantic References</span>
+</span>
+<span class="font-label-sm text-label-sm text-outline">3 Discovered</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="p-space-xs bg-surface-container-lowest flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="text-on-surface">Zettelkasten Graph Theory</span>
+<span class="text-outline text-[11px]">Unlinked match: 'epistemic linkage in swarm models'</span>
+</div>
+<button class="px-space-xs py-0.5 bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-sm text-label-sm uppercase">Link</button>
+</div>
+<div class="p-space-xs bg-surface-container-lowest flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex flex-col">
+<span class="text-on-surface">Personal Cloud Infrastructure</span>
+<span class="text-outline text-[11px]">Unlinked match: 'air-gapped local LLM worker runtime'</span>
+</div>
+<button class="px-space-xs py-0.5 bg-surface-container text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-sm text-label-sm uppercase">Link</button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  (function() {
+    const notesData = [
+      {
+        id: "note-1",
+        title: "Autonomous Agent System Architecture",
+        tier: "Projects",
+        badge: "Tier 01 // Project",
+        tierColor: "text-tertiary",
+        badgeBg: "bg-on-tertiary-container",
+        confidence: "98% Auto-Routed",
+        modified: "12m ago",
+        words: "2,480 words",
+        path: "vault/projects/agents-core.md",
+        summary: "Decentralized agent swarms interacting via vector memory state graphs with asynchronous tool calling.",
+        tags: ["#agents", "#memory", "#rag"],
+        connections: 7,
+        content: `
+          <p class="text-on-surface font-medium"># System Architecture: Agent Orchestration Engine</p>
+          <p>The primary design goal is non-blocking actor synthesis via local vector embeddings. Nodes dynamically discover upstream artifacts using <span class="text-primary hover:underline cursor-pointer">[[Vector Retreival Graph]]</span> and trigger execution pipelines.</p>
+          <div class="p-space-xs bg-surface-container-high font-mono text-[12px] text-tertiary">
+            state = SwarmState.initialize(vector_db="chroma_local")<br>
+            state.subscribe_to_tier("Projects")
+          </div>
+          <p>Key dependency established with <span class="text-primary hover:underline cursor-pointer">[[Q2 High-Throughput ChromaDB Migration]]</span> for high-dimensional low-latency indexing.</p>
+        `,
+        mentions: [
+          { title: "[[Q2 High-Throughput ChromaDB Migration]]", score: "0.94", quote: "...agents rely on zero-lag cosine calculations to maintain context graphs..." },
+          { title: "[[Transformer Latency Profiling Guide]]", score: "0.89", quote: "...optimizing multi-token generation when agent swarm instances fan out..." }
+        ]
+      },
+      {
+        id: "note-2",
+        title: "Q2 High-Throughput ChromaDB Migration",
+        tier: "Projects",
+        badge: "Tier 01 // Project",
+        tierColor: "text-tertiary",
+        badgeBg: "bg-on-tertiary-container",
+        confidence: "94% Auto-Routed",
+        modified: "4h ago",
+        words: "1,190 words",
+        path: "vault/projects/chromadb-bench.md",
+        summary: "Benchmarking 1536-dim vs 768-dim embeddings across 40k local Markdown notes for sub-15ms queries.",
+        tags: ["#vectors", "#infra"],
+        connections: 12,
+        content: `
+          <p class="text-on-surface font-medium"># ChromaDB Performance Benchmarks</p>
+          <p>Comparing Cosine, DotProduct, and L2 distance metrics under heavy local concurrency. Testing indexing performance against disk-bound SSD latency.</p>
+          <p>Linked dynamically to <span class="text-primary hover:underline cursor-pointer">[[Autonomous Agent System Architecture]]</span>.</p>
+        `,
+        mentions: [
+          { title: "[[Autonomous Agent System Architecture]]", score: "0.98", quote: "...sub-15ms memory retrievals feed active context loops..." }
+        ]
+      },
+      {
+        id: "note-4",
+        title: "Cognitive Biohacking & Sleep Architecture",
+        tier: "Areas",
+        badge: "Tier 02 // Area",
+        tierColor: "text-secondary",
+        badgeBg: "bg-secondary-container",
+        confidence: "96% Auto-Routed",
+        modified: "2d ago",
+        words: "3,210 words",
+        path: "vault/areas/sleep-bio-spec.md",
+        summary: "Daily protocol metrics for deep slow-wave latency optimization and nootropic cycling standards.",
+        tags: ["#health", "#habits"],
+        connections: 9,
+        content: `
+          <p class="text-on-surface font-medium"># Protocol 07: Circadian Entrainment Matrix</p>
+          <p>Standardizing evening blue light attenuation with custom lux sensors. Tracking heart rate variability (HRV) standard deviation via Bluetooth telemetry export.</p>
+        `,
+        mentions: [
+          { title: "[[Personal Cloud & Encryption Infrastructure]]", score: "0.81", quote: "...encrypted bio-metric database snapshots run automatically at dawn..." }
+        ]
+      },
+      {
+        id: "note-6",
+        title: "Zettelkasten Graph Theory & Epistemic Linkage",
+        tier: "Resources",
+        badge: "Tier 03 // Resource",
+        tierColor: "text-primary",
+        badgeBg: "bg-on-primary-container",
+        confidence: "99% Auto-Routed",
+        modified: "5h ago",
+        words: "4,820 words",
+        path: "vault/resources/zettelkasten-epistemic.md",
+        summary: "Curated literature survey on nonlinear hypertext, bidirectionality, and Luhmann's slip-box methods.",
+        tags: ["#pkm", "#theory"],
+        connections: 18,
+        content: `
+          <p class="text-on-surface font-medium"># The Architecture of Non-Hierarchical Thought</p>
+          <p>Rather than filing into rigid taxonomy binders, ideas form organic cluster densities. PARA acts as an actionable execution filter, while internal backlinks preserve chaotic serendipity.</p>
+        `,
+        mentions: [
+          { title: "[[Autonomous Agent System Architecture]]", score: "0.92", quote: "...associative memory structures emulate slip-box indexing cards..." },
+          { title: "[[Distributed Consensus in Heterogeneous Clusters]]", score: "0.85", quote: "...nodes maintain mutual ledger pointers similar to bidirectional cards..." }
+        ]
+      }
+    ];
+
+    const noteCards = document.querySelectorAll('.note-card');
+    const previewTitle = document.getElementById('previewTitle');
+    const previewTierBadge = document.getElementById('previewTierBadge');
+    const previewConfidence = document.getElementById('previewConfidence');
+    const previewMetaTime = document.getElementById('previewMetaTime');
+    const previewMetaWords = document.getElementById('previewMetaWords');
+    const previewMetaPath = document.getElementById('previewMetaPath');
+    const previewContent = document.getElementById('previewContent');
+    const linkedCountBadge = document.getElementById('linkedCountBadge');
+    const linkedMentionsList = document.getElementById('linkedMentionsList');
+    const filterInput = document.getElementById('filterInput');
+    const rebalanceBtn = document.getElementById('rebalanceBtn');
+    const syncSpinner = document.getElementById('syncSpinner');
+    const syncStatic = document.getElementById('syncStatic');
+
+    function selectNote(noteId) {
+      const note = notesData.find(n => n.id === noteId);
+      if (!note) return;
+
+      previewTitle.textContent = note.title;
+      previewTierBadge.textContent = note.badge;
+      previewTierBadge.className = `px-space-xs py-0.5 font-label-sm text-label-sm ${note.badgeBg} ${note.tierColor} uppercase tracking-widest font-semibold`;
+      previewConfidence.textContent = note.confidence;
+      previewMetaTime.textContent = "Modified " + note.modified;
+      previewMetaWords.textContent = note.words;
+      previewMetaPath.textContent = note.path;
+      previewContent.innerHTML = note.content;
+      linkedCountBadge.textContent = note.connections + " Backlinks";
+
+      linkedMentionsList.innerHTML = note.mentions.map(m => `
+        <div class="p-space-xs bg-surface-container-lowest hover:bg-surface-container-high transition-colors cursor-pointer flex flex-col gap-0.5 group">
+          <div class="flex items-center justify-between">
+            <span class="font-label-sm text-label-sm text-primary group-hover:underline">${m.title}</span>
+            <span class="font-label-sm text-label-sm text-outline">similarity ${m.score}</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 italic">${m.quote}</p>
+        </div>
+      `).join('');
+
+      noteCards.forEach(c => {
+        if (c.getAttribute('data-id') === noteId) {
+          c.classList.add('bg-surface-container-high');
+        } else {
+          c.classList.remove('bg-surface-container-high');
+        }
+      });
+    }
+
+    noteCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const id = card.getAttribute('data-id');
+        selectNote(id);
+      });
+    });
+
+    filterInput.addEventListener('input', (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      noteCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        if (text.includes(query)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    rebalanceBtn.addEventListener('click', () => {
+      syncSpinner.style.display = 'inline-block';
+      syncStatic.style.display = 'none';
+      rebalanceBtn.classList.add('opacity-75');
+
+      setTimeout(() => {
+        syncSpinner.style.display = 'none';
+        syncStatic.style.display = 'inline-block';
+        rebalanceBtn.classList.remove('opacity-75');
+        previewConfidence.textContent = "100% Chroma Rebalanced";
+      }, 1000);
+    });
+
+    const tierChips = document.querySelectorAll('.tier-chip');
+    tierChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        tierChips.forEach(c => {
+          c.className = "tier-chip flex-1 py-1 font-label-sm text-label-sm bg-surface-container-high text-on-surface-variant text-center hover:bg-surface-bright transition-colors";
+        });
+        chip.className = "tier-chip flex-1 py-1 font-label-sm text-label-sm bg-primary text-on-primary text-center font-bold";
+        previewTierBadge.textContent = "Manual Reclassify // " + chip.textContent;
+      });
+    });
+
+    const kanbanBtn = document.getElementById('viewKanbanBtn');
+    const listBtn = document.getElementById('viewListBtn');
+    const tableBtn = document.getElementById('viewTableBtn');
+    const kanbanBoard = document.getElementById('kanbanBoard');
+    const listView = document.getElementById('listView');
+    const listRows = document.getElementById('listRows');
+
+    function populateListView() {
+      listRows.innerHTML = notesData.map(n => `
+        <div data-id="${n.id}" class="note-card-row bg-surface-container hover:bg-surface-container-high p-space-sm flex items-center justify-between cursor-pointer transition-colors">
+          <div class="w-1/3 flex flex-col">
+            <span class="font-body-md text-body-md text-on-surface font-medium truncate">${n.title}</span>
+            <span class="font-label-sm text-label-sm ${n.tierColor}">${n.tier} &middot; ${n.confidence}</span>
+          </div>
+          <div class="w-1/3 flex flex-wrap gap-1">
+            ${n.tags.map(t => `<span class="font-label-sm text-label-sm bg-surface-container-highest text-primary px-1">${t}</span>`).join('')}
+          </div>
+          <div class="w-1/6 text-right font-label-sm text-label-sm text-tertiary">
+            ${n.connections} links
+          </div>
+          <div class="w-1/6 text-right font-label-sm text-label-sm text-outline">
+            ${n.modified}
+          </div>
+        </div>
+      `).join('');
+
+      document.querySelectorAll('.note-card-row').forEach(row => {
+        row.addEventListener('click', () => {
+          selectNote(row.getAttribute('data-id'));
+        });
+      });
+    }
+
+    kanbanBtn.addEventListener('click', () => {
+      kanbanBoard.classList.remove('hidden');
+      listView.classList.add('hidden');
+      kanbanBtn.className = "px-space-sm py-1 bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-1";
+      listBtn.className = "px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1";
+      tableBtn.className = "px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1";
+    });
+
+    listBtn.addEventListener('click', () => {
+      kanbanBoard.classList.add('hidden');
+      listView.classList.remove('hidden');
+      populateListView();
+      listBtn.className = "px-space-sm py-1 bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center gap-1";
+      kanbanBtn.className = "px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1";
+      tableBtn.className = "px-space-sm py-1 text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1";
+    });
+
+    tableBtn.addEventListener('click', () => {
+      listBtn.click();
+    });
+  })();
+</script></main></div></body></html>

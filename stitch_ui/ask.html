@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary-container":"#00452e","on-primary-fixed-variant":"#004e5c","primary":"#4cd7f6","on-secondary-container":"#b0b2ff","on-secondary-fixed":"#07006c","inverse-on-surface":"#2d3038","surface-dim":"#10131a","surface-container":"#1d1f27","inverse-primary":"#00687a","on-surface":"#e1e2ec","on-tertiary":"#003824","secondary":"#c0c1ff","on-tertiary-fixed-variant":"#005236","on-primary-container":"#00424f","surface":"#10131a","on-primary-fixed":"#001f26","tertiary-fixed-dim":"#4edea3","secondary-fixed":"#e1e0ff","inverse-surface":"#e1e2ec","surface-container-high":"#272a32","surface-bright":"#363941","tertiary-fixed":"#6ffbbe","surface-container-low":"#191b23","on-surface-variant":"#bcc9cd","background":"#10131a","on-background":"#e1e2ec","secondary-container":"#3131c0","on-tertiary-fixed":"#002113","on-secondary":"#1000a9","surface-tint":"#4cd7f6","secondary-fixed-dim":"#c0c1ff","tertiary":"#4edea3","error":"#ffb4ab","on-error":"#690005","outline-variant":"#3d494c","on-secondary-fixed-variant":"#2f2ebe","surface-container-highest":"#32353d","primary-fixed-dim":"#4cd7f6","error-container":"#93000a","on-primary":"#003640","surface-variant":"#32353d","surface-container-lowest":"#0b0e15","outline":"#869397","tertiary-container":"#1bbd85","on-error-container":"#ffdad6","primary-container":"#06b6d4","primary-fixed":"#acedff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"1rem","margin-desktop":"2rem","gutter":"1rem","space-xs":"0.25rem","space-md":"1rem","space-xl":"2.5rem","gutter-desktop":"1.5rem","space-lg":"1.5rem","space-sm":"0.5rem"},"fontFamily":{"label-sm":["JetBrains Mono"],"body-lg":["JetBrains Mono"],"body-sm":["JetBrains Mono"],"headline-md":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-md":["JetBrains Mono"],"display-lg-mobile":["Space Grotesk"],"display-lg":["Space Grotesk"],"code-block":["JetBrains Mono"],"body-md":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"]},"fontSize":{"label-sm":["0.6875rem",{"lineHeight":"1.15","letterSpacing":"0.08em","fontWeight":"500"}],"body-lg":["0.9375rem",{"lineHeight":"1.6","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1.45","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["1.375rem",{"lineHeight":"1.3","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["1.125rem",{"lineHeight":"1.4","letterSpacing":"-0.01em","fontWeight":"500"}],"label-md":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"500"}],"display-lg-mobile":["2rem",{"lineHeight":"1.15","letterSpacing":"-0.03em","fontWeight":"700"}],"display-lg":["3rem",{"lineHeight":"1.1","letterSpacing":"-0.04em","fontWeight":"700"}],"code-block":["0.8125rem",{"lineHeight":"1.65","letterSpacing":"0em","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.5","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["2rem",{"lineHeight":"1.2","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"1.25","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="SecondSelf Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XUacmOpRtYD06knDdSYzWgmCVEQIQuJXh-5KrlOfeRsj8rezik-7nUIi02qkPRcIPWsVUpOL2yfuJAsbO4Mczmllbvp90ON9V_2mydPRLDvIa8o2GyzfajPNynFxpo3lW7AJAuGrnQ8PPPdI3ElH8LLsMcjnsz5gfh6IgHbk8zn_9ZTgu1e8hBfVEwrUIbqddUOtIEPPcHF_7ue6hyP2JG7_ESg8uycCt7KNuDMTeM8ckLH9kcXA7A37w"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">SecondSelf</span><span class="font-label-sm text-label-sm text-primary tracking-widest mt-1 uppercase">Cortex Node</span></div></div><span class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">v2.4 Local</span></div><div class="px-space-md py-space-sm"><div class="font-label-sm text-label-sm text-outline uppercase tracking-widest px-space-xs py-space-xs">Cognitive Index</div></div><nav class="flex flex-col px-space-sm gap-space-xs" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary"><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md uppercase tracking-wider" data-path="knowledge-graph" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Knowledge Graph</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors font-label-md uppercase tracking-wider bg-surface-container-high text-primary border-l-2 border-primary" data-path="ask-your-brain" href="#"><span class="material-symbols-outlined text-[18px]">psychology_alt</span><span>Ask Your Brain</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md uppercase tracking-wider" data-path="capture-and-pipeline" href="#"><span class="material-symbols-outlined text-[18px]">input_circle</span><span>Capture &amp; Pipeline</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md uppercase tracking-wider" data-path="para-organization" href="#"><span class="material-symbols-outlined text-[18px]">folder_data</span><span>PARA Organization</span></a></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Vector Engine</span><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 bg-tertiary"></span><span class="font-label-sm text-label-sm text-tertiary">ChromaDB Active</span></div></div><div class="flex flex-col gap-1"><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Vault Storage</span><span class="text-on-surface">1,420 items · 48.2MB</span></div><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Memory Synced</span><span class="text-primary">99.4%</span></div></div><div class="w-full bg-surface-container-highest h-1"><div class="bg-primary h-1 w-[99.4%]"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-low/95 backdrop-blur-md z-40 px-space-lg flex items-center justify-between select-none"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-2 w-full text-on-surface-variant"><span class="material-symbols-outlined text-outline text-[18px]">terminal</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface w-full placeholder:text-outline cursor-pointer" placeholder="&gt; ⌘K Search cognitive cortex or input stream..." readonly="" type="text"/><span class="font-label-sm text-label-sm bg-surface-container-high px-1.5 py-0.5 text-outline">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs bg-surface-container px-space-sm py-1 font-label-sm text-label-sm"><span class="w-1.5 h-1.5 bg-tertiary"></span><span class="text-on-surface-variant">Pipeline Idle · Ready</span></div><button class="px-space-md py-2 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider font-semibold flex items-center gap-space-xs hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>Quick Note</span></button><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Sub-Header Telemetry Ribbon -->
+<div class="w-full bg-surface-container-low px-margin-desktop py-space-sm flex flex-wrap items-center justify-between gap-space-sm select-none">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider text-outline">
+<span class="material-symbols-outlined text-[16px] text-primary">neurology</span>
+<span>Cognitive Node RAG Engine</span>
+</div>
+<span class="text-outline">/</span>
+<div class="flex items-center gap-space-xs bg-surface-container-high px-space-sm py-0.5">
+<span class="w-2 h-2 bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Mistral 7B Local + bge-large-en-v1.5</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant hidden lg:inline">ChromaDB Collection: <span class="text-primary font-semibold">default_vault_v2</span></span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span>K-NN RETRIEVAL:</span>
+<span class="text-tertiary font-bold">TOP_K=5</span>
+<span class="text-outline">·</span>
+<span>TEMPERATURE:</span>
+<span class="text-primary font-bold">0.15</span>
+</div>
+<button class="px-space-sm py-1 bg-surface-container-high text-primary hover:bg-surface-bright flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider transition-colors" id="toggle-chunks-btn">
+<span class="material-symbols-outlined text-[14px]">tune</span>
+<span>Telemetry Deck</span>
+</button>
+</div>
+</div>
+<!-- Primary Workspace Canvas (Grid Matrix: Center Q&A Stream + Right Vector Inspector) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-0 w-full min-h-[calc(100vh-8rem)]">
+<!-- Central Flow Section (Col 8 on 12-col grid) -->
+<div class="xl:col-span-8 p-margin-desktop flex flex-col gap-space-xl">
+<!-- Prominent Natural Language Search Input Console -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-md shadow-md relative">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-tertiary">prompt_suggestion</span>
+<span>Synthesize from 1,420 Vault Markdown Artifacts</span>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Deep Research Toggle -->
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Deep Research Mode</span>
+<div class="w-10 h-5 bg-surface-container-highest flex items-center px-0.5 cursor-pointer transition-colors relative" id="deep-research-toggle">
+<div class="w-4 h-4 bg-primary transition-transform"></div>
+</div>
+</label>
+</div>
+</div>
+<!-- Input Bar with Shell Prompt Symbol -->
+<div class="bg-surface-container-lowest p-space-md flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] mt-0.5">terminal</span>
+<div class="flex-1 flex flex-col">
+<div class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold selection:bg-primary selection:text-on-primary">
+              How do my notes connect transformer attention mechanisms to the autonomous agent system I am designing?
+            </div>
+<div class="flex items-center gap-space-sm mt-space-sm pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase">Query Hash: <span class="text-on-surface-variant">0x7F4A88</span></span>
+<span class="text-outline">·</span>
+<span class="font-label-sm text-label-sm text-outline uppercase">Inference: <span class="text-tertiary">38.4 tokens/s (GPU-0 Metal)</span></span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary-fixed text-on-primary font-label-md text-label-md uppercase px-space-md py-2 tracking-wider font-semibold flex items-center gap-space-xs transition-colors shrink-0">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Query</span>
+</button>
+</div>
+</div>
+<!-- Semantic Vector Search Retrieval Strip (Pre-Answer Context Cards) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-wider text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[18px]">saved_search</span>
+<span>Semantic Match Sources</span>
+<span class="text-outline-variant font-label-sm text-label-sm">(3 Notes Cited · Cosine Similarity &gt; 0.82)</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase">Top K Rerank: Cohere-v3</span>
+</div>
+<!-- Retrieval Strip Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Card 1: Project -->
+<div class="group bg-surface-container-low hover:bg-surface-container p-space-md flex flex-col justify-between transition-colors cursor-pointer relative" onclick="openInspector('173ca507')">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-tertiary"></div>
+<div class="flex flex-col gap-space-xs pl-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm tracking-wider uppercase font-semibold">96% Match</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">[173ca507]</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight mt-1 line-clamp-1">
+                Autonomous Agent Memory Stack
+              </h4>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest">PARA: Project · Active</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+                Hierarchical context retrieval with dual episodic and semantic memory pools. Implements dynamic buffer pruning...
+              </p>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs pl-space-xs font-label-sm text-label-sm text-outline">
+<span>Updated 3d ago</span>
+<span class="material-symbols-outlined text-[16px] text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2: Resource -->
+<div class="group bg-surface-container-low hover:bg-surface-container p-space-md flex flex-col justify-between transition-colors cursor-pointer relative" onclick="openInspector('882a41f9')">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex flex-col gap-space-xs pl-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm tracking-wider uppercase font-semibold">89% Match</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">[882a41f9]</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight mt-1 line-clamp-1">
+                Transformer Attention Paper Notes
+              </h4>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">PARA: Resource · Tech Deep Dive</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+                KV cache management and attention weight caching across multi-turn reasoning loops. Analysis of FlashAttention-2 speedups...
+              </p>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs pl-space-xs font-label-sm text-label-sm text-outline">
+<span>Updated 12d ago</span>
+<span class="material-symbols-outlined text-[16px] text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3: Area -->
+<div class="group bg-surface-container-low hover:bg-surface-container p-space-md flex flex-col justify-between transition-colors cursor-pointer relative" onclick="openInspector('cf20e19d')">
+<div class="absolute top-0 left-0 bottom-0 w-1 bg-secondary"></div>
+<div class="flex flex-col gap-space-xs pl-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm tracking-wider uppercase font-semibold">84% Match</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">[cf20e19d]</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight mt-1 line-clamp-1">
+                Distributed Systems Architecture
+              </h4>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">PARA: Area · Systems &amp; Concurrency</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mt-space-xs">
+                Stateful actor model for worker agents. Asynchronous message queues and deterministic serialization schemas...
+              </p>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs pl-space-xs font-label-sm text-label-sm text-outline">
+<span>Updated 1mo ago</span>
+<span class="material-symbols-outlined text-[16px] text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Synthesized AI Answer Card -->
+<div class="bg-surface-container-low p-space-lg flex flex-col gap-space-md shadow-lg relative">
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-lowest -mx-space-lg -mt-space-lg px-space-lg py-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_awesome</span>
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">Synthesized Cognitive Synthesis</span>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-label-sm text-label-sm text-outline">LATENCY: <span class="text-tertiary">412ms to first token</span></span>
+<span class="font-label-sm text-label-sm text-outline">CONTEXT WINDOW: <span class="text-primary">3,890 / 8,192 tok</span></span>
+</div>
+</div>
+<!-- Formatted Markdown Content -->
+<div class="font-body-lg text-body-lg text-on-surface flex flex-col gap-space-md leading-relaxed selection:bg-primary selection:text-on-primary">
+<p>
+            Based on your linked notes across your vault, your architecture treats the 
+            <strong class="text-primary font-semibold">Transformer Self-Attention Matrix</strong> not merely as a token prediction engine, but as an active <em>dynamic retrieval filter</em> for the autonomous agent's working memory runtime
+            <!-- In-line Citation 1 -->
+<button class="citation-tag inline-flex items-center gap-0.5 px-1 py-0.2 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-sm text-label-sm font-mono align-baseline uppercase mx-1" data-cite="173ca507" title="Click to view Source: Autonomous Agent Memory Stack">
+<span>[173ca507]</span>
+</button>.
+          </p>
+<div class="bg-surface-container-lowest p-space-md my-space-xs">
+<div class="font-label-sm text-label-sm text-outline uppercase tracking-wider mb-space-xs flex items-center justify-between">
+<span>Synthesized Structural Topology</span>
+<span class="text-tertiary font-mono">ARCH_DIAGRAM_V2</span>
+</div>
+<div class="font-code-block text-code-block text-tertiary font-mono bg-surface-dim p-space-sm overflow-x-auto leading-normal">
+User Prompt ──&gt; Attention Q Matrix ──&gt; Dual Memory Buffer [173ca507]
+                     │                       ▲
+                     ▼                       │
+             KV Cache Rollout ──────&gt; Actor Model Dispatcher [cf20e19d]
+             (FlashAttn-2) [882a41f9]
+            </div>
+</div>
+<p>
+            Specifically, three foundational connection points emerge between these concepts:
+          </p>
+<ol class="list-decimal pl-space-lg flex flex-col gap-space-sm text-on-surface-variant font-body-md text-body-md">
+<li>
+<strong class="text-on-surface">Dual-Track Contextual Paging:</strong> 
+              In your notes on <em>Autonomous Agent Memory Stack</em>, you formalize that high-attention weights over repeated tokens trigger promotion into a long-term episodic buffer. Rather than querying your vector index on every reasoning hop, query vectors ($Q$) are projected against the cached Key-Value pairs
+              <!-- Citation 2 -->
+<button class="citation-tag inline-flex items-center gap-0.5 px-1 py-0.2 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-sm text-label-sm font-mono align-baseline uppercase mx-1" data-cite="882a41f9">
+<span>[882a41f9]</span>
+</button> 
+              to determine semantic delta thresholds before vector execution.
+            </li>
+<li>
+<strong class="text-on-surface">Actor-Driven KV Cache Eviction:</strong> 
+              According to your <em>Distributed Systems Architecture</em> note
+              <!-- Citation 3 -->
+<button class="citation-tag inline-flex items-center gap-0.5 px-1 py-0.2 bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary transition-colors font-label-sm text-label-sm font-mono align-baseline uppercase mx-1" data-cite="cf20e19d">
+<span>[cf20e19d]</span>
+</button>, 
+              worker sub-agents operate asynchronously. Attention sinks are preserved across thread boundary switches, avoiding full quadratic context recalculations during inter-agent message passing.
+            </li>
+<li>
+<strong class="text-on-surface">Attention-Weighted State Pruning:</strong> 
+              Tokens with normalized cumulative attention below the $0.05$ threshold across two successive reasoning turns are dropped via your custom circular buffer, yielding a documented <span class="text-tertiary font-semibold">41.8% decrease in memory footprint</span> during recursive tool-use loops.
+            </li>
+</ol>
+</div>
+<!-- Citation Micro-Inspector Floating Preview (Interactive Trigger Mock) -->
+<div class="hidden absolute z-30 bg-surface-container-highest p-space-md shadow-2xl max-w-sm flex flex-col gap-space-xs pointer-events-none" id="citation-tooltip">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-mono font-bold" id="tooltip-id"></span>
+<span class="font-label-sm text-label-sm text-tertiary" id="tooltip-score"></span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold text-sm" id="tooltip-title"></div>
+<div class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3" id="tooltip-excerpt"></div>
+</div>
+<!-- Action Toolbar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-md bg-surface-container-lowest -mx-space-lg -mb-space-lg px-space-lg py-space-sm">
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="action-btn px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-bright text-on-surface flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider transition-colors" data-action="Copy Answer">
+<span class="material-symbols-outlined text-[16px] text-primary">content_copy</span>
+<span>Copy Answer</span>
+</button>
+<button class="action-btn px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-bright text-on-surface flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider transition-colors" data-action="Save as Note">
+<span class="material-symbols-outlined text-[16px] text-tertiary">save</span>
+<span>Save as New Note</span>
+</button>
+<button class="action-btn px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-bright text-on-surface flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider transition-colors" data-action="Regenerate">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">replay</span>
+<span>Regenerate</span>
+</button>
+<button class="action-btn px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-bright text-on-surface flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider transition-colors" data-action="BibTeX">
+<span class="material-symbols-outlined text-[16px] text-secondary">format_quote</span>
+<span>BibTeX</span>
+</button>
+</div>
+<button class="action-btn px-space-sm py-1.5 bg-surface-container-high hover:bg-surface-bright text-on-surface flex items-center gap-space-xs font-label-sm text-label-sm uppercase tracking-wider transition-colors" data-action="Export MD">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Markdown</span>
+</button>
+</div>
+</div>
+<!-- Follow-up Questions Section -->
+<div class="flex flex-col gap-space-sm pb-space-xl">
+<div class="flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-wider text-outline">
+<span class="material-symbols-outlined text-[18px] text-primary">subdirectory_arrow_right</span>
+<span>Suggested Reasoning Trajectories</span>
+</div>
+<div class="flex flex-wrap gap-space-sm">
+<button class="followup-btn text-left p-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center gap-space-sm transition-colors group">
+<span class="material-symbols-outlined text-primary text-[18px] group-hover:translate-x-0.5 transition-transform">search</span>
+<span class="font-body-sm text-body-sm">What latency trade-offs did I record for KV caching?</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">⌘1</span>
+</button>
+<button class="followup-btn text-left p-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center gap-space-sm transition-colors group">
+<span class="material-symbols-outlined text-primary text-[18px] group-hover:translate-x-0.5 transition-transform">checklist</span>
+<span class="font-body-sm text-body-sm">List all action items from the agent design note</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">⌘2</span>
+</button>
+<button class="followup-btn text-left p-space-sm bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center gap-space-sm transition-colors group">
+<span class="material-symbols-outlined text-primary text-[18px] group-hover:translate-x-0.5 transition-transform">account_tree</span>
+<span class="font-body-sm text-body-sm">Trace the dependency graph for worker actor message serializing</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">⌘3</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Right Drawer / Telemetry Side Panel: 'Retrieved Context Chunks' (Col 4 on 12-col grid) -->
+<div class="xl:col-span-4 bg-surface-container-lowest p-margin-desktop flex flex-col gap-space-md overflow-y-auto" id="inspector-panel">
+<!-- Telemetry Title Header -->
+<div class="flex items-center justify-between pb-space-sm bg-surface-container-low p-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">database</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold tracking-tight">Raw Context Chunks</span>
+</div>
+<span class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-mono">bge-large Cosine</span>
+</div>
+<!-- Vector Search Metrics Strip -->
+<div class="grid grid-cols-3 gap-space-xs bg-surface-container-low p-space-sm text-center">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Chunk Count</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">5 Chunks</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Total Ingested</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">1,842 tok</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline uppercase">Filter Cutoff</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">0.80 sim</span>
+</div>
+</div>
+<!-- Raw Chunks Accordion List -->
+<div class="flex flex-col gap-space-md">
+<!-- Chunk 1 Detail Card -->
+<div class="chunk-card bg-surface-container-low p-space-md flex flex-col gap-space-xs transition-all" id="chunk-card-173ca507">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-mono font-bold">[173ca507 #chunk-04]</span>
+<span class="px-1 py-0.2 bg-surface-container text-tertiary font-label-sm text-label-sm font-semibold">0.963 Sim</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">428 tokens</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary">folder</span>
+<span>Autonomous Agent Memory Stack.md</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm font-code-block text-code-block text-on-surface-variant font-mono leading-relaxed select-text mt-1">
+            "We construct the dual memory plane where <mark class="bg-primary/20 text-primary px-0.5 font-bold">self-attention memory buffers</mark> operate as a cache before disk-persisted vector recall. A ring buffer holds the recent 16 turns. Attention weights of queries over agent state variables determine which episodic memories are elevated into the dynamic graph."
+          </div>
+<div class="flex items-center justify-between mt-space-xs pt-space-xs font-label-sm text-label-sm text-outline">
+<span>Heading: ## Working Memory Buffer</span>
+<span class="text-primary hover:underline cursor-pointer">Open File →</span>
+</div>
+</div>
+<!-- Chunk 2 Detail Card -->
+<div class="chunk-card bg-surface-container-low p-space-md flex flex-col gap-space-xs transition-all" id="chunk-card-882a41f9">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary font-mono font-bold">[882a41f9 #chunk-11]</span>
+<span class="px-1 py-0.2 bg-surface-container text-primary font-label-sm text-label-sm font-semibold">0.891 Sim</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">512 tokens</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">menu_book</span>
+<span>Transformer Attention Paper Notes.md</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm font-code-block text-code-block text-on-surface-variant font-mono leading-relaxed select-text mt-1">
+            "KV cache reuse across long execution trajectories requires freezing early prompt tokens. In autonomous iterative loops, keeping the <mark class="bg-primary/20 text-primary px-0.5 font-bold">KV cache allocated</mark> rather than recomputing the full self-attention matrix speeds reasoning passes by 3.8x at the cost of unified VRAM."
+          </div>
+<div class="flex items-center justify-between mt-space-xs pt-space-xs font-label-sm text-label-sm text-outline">
+<span>Heading: ### Attention Caching &amp; Latency</span>
+<span class="text-primary hover:underline cursor-pointer">Open File →</span>
+</div>
+</div>
+<!-- Chunk 3 Detail Card -->
+<div class="chunk-card bg-surface-container-low p-space-md flex flex-col gap-space-xs transition-all" id="chunk-card-cf20e19d">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-mono font-bold">[cf20e19d #chunk-02]</span>
+<span class="px-1 py-0.2 bg-surface-container text-secondary font-label-sm text-label-sm font-semibold">0.842 Sim</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-mono">318 tokens</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">layers</span>
+<span>Distributed Systems Architecture.md</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm font-code-block text-code-block text-on-surface-variant font-mono leading-relaxed select-text mt-1">
+            "The stateful actor model coordinates sub-agent worker nodes. When dispatching autonomous tasks, each actor mailbox maintains its own serialized context snippet. State synchronization utilizes <mark class="bg-secondary/20 text-secondary px-0.5 font-bold">actor-driven state pruning</mark>."
+          </div>
+<div class="flex items-center justify-between mt-space-xs pt-space-xs font-label-sm text-label-sm text-outline">
+<span>Heading: # Actor System Architecture</span>
+<span class="text-primary hover:underline cursor-pointer">Open File →</span>
+</div>
+</div>
+<!-- Vector Distribution Visualization (Inline SVG Minimalist Bar Chart) -->
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Similarity Score Distribution</span>
+<div class="h-24 w-full flex items-end gap-1.5 pt-2">
+<div class="h-[96%] flex-1 bg-tertiary flex flex-col justify-end items-center pb-1" title="Chunk 04: 0.963">
+<span class="font-label-sm text-label-sm text-on-tertiary text-[9px] font-mono">.96</span>
+</div>
+<div class="h-[89%] flex-1 bg-primary flex flex-col justify-end items-center pb-1" title="Chunk 11: 0.891">
+<span class="font-label-sm text-label-sm text-on-primary text-[9px] font-mono">.89</span>
+</div>
+<div class="h-[84%] flex-1 bg-secondary flex flex-col justify-end items-center pb-1" title="Chunk 02: 0.842">
+<span class="font-label-sm text-label-sm text-on-secondary text-[9px] font-mono">.84</span>
+</div>
+<div class="h-[73%] flex-1 bg-surface-container-high flex flex-col justify-end items-center pb-1 opacity-50" title="Chunk 08: 0.731 (Filtered)">
+<span class="font-label-sm text-label-sm text-outline text-[9px] font-mono">.73</span>
+</div>
+<div class="h-[62%] flex-1 bg-surface-container-high flex flex-col justify-end items-center pb-1 opacity-50" title="Chunk 14: 0.620 (Filtered)">
+<span class="font-label-sm text-label-sm text-outline text-[9px] font-mono">.62</span>
+</div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-outline font-mono mt-1">
+<span>Rank 1 (Top)</span>
+<span class="text-error">Threshold 0.80</span>
+<span>Rank 5</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Container (Vanilla Interactive System) -->
+<div class="fixed bottom-space-md right-space-md bg-surface-container-highest px-space-md py-space-sm text-primary font-label-sm text-label-sm uppercase tracking-wider shadow-2xl transition-opacity opacity-0 pointer-events-none z-50 flex items-center gap-space-xs" id="toast">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span id="toast-msg">Operation Executed</span>
+</div>
+</div>
+<script>
+  // Citation Data Store for instant hover inspections
+  const citationStore = {
+    '173ca507': {
+      title: 'Autonomous Agent Memory Stack',
+      score: '0.963 Cosine',
+      excerpt: 'Hierarchical context retrieval with dual episodic and semantic memory pools. Dynamic buffer pruning based on self-attention decay.'
+    },
+    '882a41f9': {
+      title: 'Transformer Attention Paper Notes',
+      score: '0.891 Cosine',
+      excerpt: 'KV cache management and attention weight caching across multi-turn reasoning loops. Analysis of FlashAttention-2 speedups.'
+    },
+    'cf20e19d': {
+      title: 'Distributed Systems Architecture',
+      score: '0.842 Cosine',
+      excerpt: 'Stateful actor model for worker agents. Asynchronous message queues and state pruning via circular buffer allocations.'
+    }
+  };
+
+  const tooltip = document.getElementById('citation-tooltip');
+  const tooltipId = document.getElementById('tooltip-id');
+  const tooltipScore = document.getElementById('tooltip-score');
+  const tooltipTitle = document.getElementById('tooltip-title');
+  const tooltipExcerpt = document.getElementById('tooltip-excerpt');
+
+  // Interactive Citation Hover Hooks
+  document.querySelectorAll('.citation-tag').forEach(tag => {
+    tag.addEventListener('mouseenter', (e) => {
+      const citeId = tag.getAttribute('data-cite');
+      const data = citationStore[citeId];
+      if (!data) return;
+
+      tooltipId.textContent = '[' + citeId + ']';
+      tooltipScore.textContent = data.score;
+      tooltipTitle.textContent = data.title;
+      tooltipExcerpt.textContent = data.excerpt;
+
+      const rect = tag.getBoundingClientRect();
+      const parentRect = tag.closest('.relative').getBoundingClientRect();
+      
+      tooltip.style.left = (rect.left - parentRect.left) + 'px';
+      tooltip.style.top = (rect.top - parentRect.top - 120) + 'px';
+      tooltip.classList.remove('hidden');
+    });
+
+    tag.addEventListener('mouseleave', () => {
+      tooltip.classList.add('hidden');
+    });
+
+    tag.addEventListener('click', (e) => {
+      const citeId = tag.getAttribute('data-cite');
+      openInspector(citeId);
+    });
+  });
+
+  // Action Bar Buttons Toast Feedback
+  document.querySelectorAll('.action-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const action = btn.getAttribute('data-action');
+      showToast(action + ' completed');
+    });
+  });
+
+  // Follow-up question pills interaction
+  document.querySelectorAll('.followup-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const questionText = btn.querySelector('.font-body-sm').textContent;
+      showToast('Running synthesis for prompt...');
+    });
+  });
+
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-msg');
+    toastMsg.textContent = msg;
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 2400);
+  }
+
+  // Focus and highlight specific chunk in telemetry right panel
+  function openInspector(id) {
+    const card = document.getElementById('chunk-card-' + id);
+    if (!card) return;
+
+    // Reset all chunk cards
+    document.querySelectorAll('.chunk-card').forEach(c => {
+      c.classList.remove('bg-surface-bright');
+    });
+
+    // Highlight target card
+    card.classList.add('bg-surface-bright');
+    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    showToast('Inspecting chunk [' + id + ']');
+  }
+
+  // Toggle Deep Research Switch
+  const deepResearchToggle = document.getElementById('deep-research-toggle');
+  let deepResearchActive = true;
+  deepResearchToggle.addEventListener('click', () => {
+    deepResearchActive = !deepResearchActive;
+    const thumb = deepResearchToggle.querySelector('div');
+    if (deepResearchActive) {
+      thumb.style.transform = 'translateX(1.25rem)';
+      deepResearchToggle.classList.replace('bg-surface-container', 'bg-surface-container-highest');
+      showToast('Deep Research: Activated (Multi-Hop)');
+    } else {
+      thumb.style.transform = 'translateX(0px)';
+      deepResearchToggle.classList.replace('bg-surface-container-highest', 'bg-surface-container');
+      showToast('Deep Research: Off (Direct K-NN)');
+    }
+  });
+
+  // Telemetry drawer responsive toggle for small screens
+  const toggleChunksBtn = document.getElementById('toggle-chunks-btn');
+  const inspectorPanel = document.getElementById('inspector-panel');
+  toggleChunksBtn.addEventListener('click', () => {
+    inspectorPanel.scrollIntoView({ behavior: 'smooth' });
+    showToast('Focusing Telemetry Stream');
+  });
+</script></main></div></body></html>

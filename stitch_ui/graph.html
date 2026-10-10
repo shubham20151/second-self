@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-tertiary-container":"#00452e","on-primary-fixed-variant":"#004e5c","primary":"#4cd7f6","on-secondary-container":"#b0b2ff","on-secondary-fixed":"#07006c","inverse-on-surface":"#2d3038","surface-dim":"#10131a","surface-container":"#1d1f27","inverse-primary":"#00687a","on-surface":"#e1e2ec","on-tertiary":"#003824","secondary":"#c0c1ff","on-tertiary-fixed-variant":"#005236","on-primary-container":"#00424f","surface":"#10131a","on-primary-fixed":"#001f26","tertiary-fixed-dim":"#4edea3","secondary-fixed":"#e1e0ff","inverse-surface":"#e1e2ec","surface-container-high":"#272a32","surface-bright":"#363941","tertiary-fixed":"#6ffbbe","surface-container-low":"#191b23","on-surface-variant":"#bcc9cd","background":"#10131a","on-background":"#e1e2ec","secondary-container":"#3131c0","on-tertiary-fixed":"#002113","on-secondary":"#1000a9","surface-tint":"#4cd7f6","secondary-fixed-dim":"#c0c1ff","tertiary":"#4edea3","error":"#ffb4ab","on-error":"#690005","outline-variant":"#3d494c","on-secondary-fixed-variant":"#2f2ebe","surface-container-highest":"#32353d","primary-fixed-dim":"#4cd7f6","error-container":"#93000a","on-primary":"#003640","surface-variant":"#32353d","surface-container-lowest":"#0b0e15","outline":"#869397","tertiary-container":"#1bbd85","on-error-container":"#ffdad6","primary-container":"#06b6d4","primary-fixed":"#acedff"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"1rem","margin-desktop":"2rem","gutter":"1rem","space-xs":"0.25rem","space-md":"1rem","space-xl":"2.5rem","gutter-desktop":"1.5rem","space-lg":"1.5rem","space-sm":"0.5rem"},"fontFamily":{"label-sm":["JetBrains Mono"],"body-lg":["JetBrains Mono"],"body-sm":["JetBrains Mono"],"headline-md":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-md":["JetBrains Mono"],"display-lg-mobile":["Space Grotesk"],"display-lg":["Space Grotesk"],"code-block":["JetBrains Mono"],"body-md":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"]},"fontSize":{"label-sm":["0.6875rem",{"lineHeight":"1.15","letterSpacing":"0.08em","fontWeight":"500"}],"body-lg":["0.9375rem",{"lineHeight":"1.6","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["0.75rem",{"lineHeight":"1.45","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["1.375rem",{"lineHeight":"1.3","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["1.125rem",{"lineHeight":"1.4","letterSpacing":"-0.01em","fontWeight":"500"}],"label-md":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.05em","fontWeight":"500"}],"display-lg-mobile":["2rem",{"lineHeight":"1.15","letterSpacing":"-0.03em","fontWeight":"700"}],"display-lg":["3rem",{"lineHeight":"1.1","letterSpacing":"-0.04em","fontWeight":"700"}],"code-block":["0.8125rem",{"lineHeight":"1.65","letterSpacing":"0em","fontWeight":"400"}],"body-md":["0.875rem",{"lineHeight":"1.5","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["2rem",{"lineHeight":"1.2","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"1.25","letterSpacing":"-0.02em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between select-none"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between bg-surface-container-low"><div class="flex items-center gap-space-sm"><img alt="SecondSelf Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XUacmOpRtYD06knDdSYzWgmCVEQIQuJXh-5KrlOfeRsj8rezik-7nUIi02qkPRcIPWsVUpOL2yfuJAsbO4Mczmllbvp90ON9V_2mydPRLDvIa8o2GyzfajPNynFxpo3lW7AJAuGrnQ8PPPdI3ElH8LLsMcjnsz5gfh6IgHbk8zn_9ZTgu1e8hBfVEwrUIbqddUOtIEPPcHF_7ue6hyP2JG7_ESg8uycCt7KNuDMTeM8ckLH9kcXA7A37w"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-none tracking-tight">SecondSelf</span><span class="font-label-sm text-label-sm text-primary tracking-widest mt-1 uppercase">Cortex Node</span></div></div><span class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">v2.4 Local</span></div><div class="px-space-md py-space-sm"><div class="font-label-sm text-label-sm text-outline uppercase tracking-widest px-space-xs py-space-xs">Cognitive Index</div></div><nav class="flex flex-col px-space-sm gap-space-xs" data-active-classes="bg-surface-container-high text-primary border-l-2 border-primary"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors font-label-md uppercase tracking-wider bg-surface-container-high text-primary border-l-2 border-primary" data-path="knowledge-graph" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Knowledge Graph</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md uppercase tracking-wider" data-path="ask-your-brain" href="#"><span class="material-symbols-outlined text-[18px]">psychology_alt</span><span>Ask Your Brain</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md uppercase tracking-wider" data-path="capture-and-pipeline" href="#"><span class="material-symbols-outlined text-[18px]">input_circle</span><span>Capture &amp; Pipeline</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md uppercase tracking-wider" data-path="para-organization" href="#"><span class="material-symbols-outlined text-[18px]">folder_data</span><span>PARA Organization</span></a></nav></div><div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Vector Engine</span><div class="flex items-center gap-1"><span class="w-1.5 h-1.5 bg-tertiary"></span><span class="font-label-sm text-label-sm text-tertiary">ChromaDB Active</span></div></div><div class="flex flex-col gap-1"><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Vault Storage</span><span class="text-on-surface">1,420 items · 48.2MB</span></div><div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant"><span>Memory Synced</span><span class="text-primary">99.4%</span></div></div><div class="w-full bg-surface-container-highest h-1"><div class="bg-primary h-1 w-[99.4%]"></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-low/95 backdrop-blur-md z-40 px-space-lg flex items-center justify-between select-none"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-2 w-full text-on-surface-variant"><span class="material-symbols-outlined text-outline text-[18px]">terminal</span><input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface w-full placeholder:text-outline cursor-pointer" placeholder="&gt; ⌘K Search cognitive cortex or input stream..." readonly="" type="text"/><span class="font-label-sm text-label-sm bg-surface-container-high px-1.5 py-0.5 text-outline">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs bg-surface-container px-space-sm py-1 font-label-sm text-label-sm"><span class="w-1.5 h-1.5 bg-tertiary"></span><span class="text-on-surface-variant">Pipeline Idle · Ready</span></div><button class="px-space-md py-2 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider font-semibold flex items-center gap-space-xs hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors"><span class="material-symbols-outlined text-[16px]">add</span><span>Quick Note</span></button><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full relative select-none overflow-hidden">
+<!-- HUD Top Bar -->
+<section class="w-full bg-surface-container-low px-space-lg py-space-sm flex flex-wrap items-center justify-between gap-space-md shadow-sm z-30">
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">hub</span>
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight uppercase">Cognitive Graph Matrix</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-1">
+<span class="font-label-sm text-label-sm text-outline">TELEMETRY:</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">249 NODES</span>
+<span class="font-label-sm text-label-sm text-outline">/</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">812 BRIDGES</span>
+</div>
+<div class="flex items-center gap-1.5 bg-surface-container-high px-space-xs py-0.5">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider font-semibold">Live Physics Engine</span>
+</div>
+</div>
+<!-- Quick HUD Action Controls -->
+<div class="flex items-center gap-space-sm">
+<div class="hidden md:flex items-center bg-surface-container-lowest px-space-sm py-1 gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase">Render Mode</span>
+<button class="font-label-sm text-label-sm px-2 py-0.5 bg-primary text-on-primary font-semibold transition-none" id="view-2d-btn">2D MATRIX</button>
+<button class="font-label-sm text-label-sm px-2 py-0.5 bg-transparent text-on-surface-variant hover:text-primary transition-none" id="view-3d-btn">3D TOPOLOGY</button>
+</div>
+<div class="flex items-center bg-surface-container-lowest">
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-none" id="zoom-in" title="Zoom In (+)">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-none" id="zoom-out" title="Zoom Out (-)">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-none" id="zoom-reset" title="Reset View (100%)">
+<span class="material-symbols-outlined text-[16px]">filter_center_focus</span>
+</button>
+</div>
+<button class="px-space-md py-1.5 bg-surface-container text-primary hover:bg-surface-container-high font-label-md text-label-md uppercase flex items-center gap-1.5" id="toggle-inspector">
+<span class="material-symbols-outlined text-[18px]">dock_to_left</span>
+<span class="hidden sm:inline">Telemetry</span>
+</button>
+</div>
+</section>
+<!-- Main Viewport Canvas & Control Overlays -->
+<div class="relative w-full h-[calc(100vh-8rem)] bg-surface-container-lowest flex overflow-hidden">
+<!-- Filter, Search & Simulation Control Deck (Floating Tactical Left Dock) -->
+<aside class="absolute top-4 left-4 z-20 w-80 max-w-[calc(100vw-2rem)] flex flex-col gap-3 pointer-events-none">
+<!-- Graph Search Field -->
+<div class="pointer-events-auto bg-surface-container-low shadow-xl p-space-sm flex flex-col gap-2">
+<div class="flex items-center gap-2 bg-surface-container-lowest px-space-sm py-1.5 text-on-surface">
+<span class="material-symbols-outlined text-outline text-[16px]">travel_explore</span>
+<input class="bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface w-full placeholder:text-outline" id="graph-search" placeholder="Filter nodes by keyword, tag..." type="text"/>
+<span class="font-label-sm text-label-sm bg-surface-container-high px-1 py-0.5 text-outline">ESC</span>
+</div>
+</div>
+<!-- PARA Class Toggles -->
+<div class="pointer-events-auto bg-surface-container-low shadow-xl p-space-md flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Classification Index</span>
+<span class="font-label-sm text-label-sm text-primary">All Active</span>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<!-- Projects -->
+<button class="para-filter-btn flex items-center justify-between px-2.5 py-1.5 bg-surface-container-lowest hover:bg-surface-container-high transition-none text-left" data-filter="project">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-tertiary"></span>
+<span class="font-label-md text-label-md text-on-surface uppercase">Projects</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">42</span>
+</button>
+<!-- Areas -->
+<button class="para-filter-btn flex items-center justify-between px-2.5 py-1.5 bg-surface-container-lowest hover:bg-surface-container-high transition-none text-left" data-filter="area">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-[#f59e0b]"></span>
+<span class="font-label-md text-label-md text-on-surface uppercase">Areas</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#f59e0b]">28</span>
+</button>
+<!-- Resources -->
+<button class="para-filter-btn flex items-center justify-between px-2.5 py-1.5 bg-surface-container-lowest hover:bg-surface-container-high transition-none text-left" data-filter="resource">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-primary"></span>
+<span class="font-label-md text-label-md text-on-surface uppercase">Resources</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold">114</span>
+</button>
+<!-- Archives -->
+<button class="para-filter-btn flex items-center justify-between px-2.5 py-1.5 bg-surface-container-lowest hover:bg-surface-container-high transition-none text-left" data-filter="archive">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 bg-secondary"></span>
+<span class="font-label-md text-label-md text-on-surface uppercase">Archives</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary">65</span>
+</button>
+</div>
+</div>
+<!-- Physics & Similarity Modulators (Collapsible Deck) -->
+<div class="pointer-events-auto bg-surface-container-low shadow-xl p-space-md flex flex-col gap-3">
+<div class="flex items-center justify-between cursor-pointer" id="physics-panel-header">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">tune</span>
+            Vector Thresholds &amp; Physics
+          </span>
+<span class="material-symbols-outlined text-[16px] text-outline">unfold_more</span>
+</div>
+<div class="flex flex-col gap-3 pt-1">
+<!-- Cosine Threshold -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Cosine Threshold (Sim)</span>
+<span class="text-primary font-semibold" id="sim-val">0.75</span>
+</div>
+<input class="w-full accent-[#4cd7f6] cursor-pointer h-1 bg-surface-container-highest" id="slider-sim" max="0.95" min="0.40" step="0.01" type="range" value="0.75"/>
+</div>
+<!-- Max k-NN Connections -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Max Connections (k-NN)</span>
+<span class="text-tertiary font-semibold" id="knn-val">8</span>
+</div>
+<input class="w-full accent-[#4edea3] cursor-pointer h-1 bg-surface-container-highest" id="slider-knn" max="24" min="2" step="1" type="range" value="8"/>
+</div>
+<!-- Repulsion Force -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Charge Repulsion</span>
+<span class="text-secondary font-semibold" id="repulsion-val">420</span>
+</div>
+<input class="w-full accent-[#c0c1ff] cursor-pointer h-1 bg-surface-container-highest" id="slider-repulsion" max="1000" min="100" step="10" type="range" value="420"/>
+</div>
+<!-- Gravity Center -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Centroid Gravity</span>
+<span class="text-on-surface font-semibold" id="gravity-val">0.15</span>
+</div>
+<input class="w-full accent-[#869397] cursor-pointer h-1 bg-surface-container-highest" id="slider-gravity" max="0.50" min="0.01" step="0.01" type="range" value="0.15"/>
+</div>
+</div>
+</div>
+<!-- Quick Canvas Status Pill -->
+<div class="pointer-events-auto bg-surface-container-low/90 backdrop-blur-sm px-space-md py-2 flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase">Physics Status:</span>
+<span class="font-label-sm text-label-sm text-tertiary">Relaxed (Delta &lt; 0.002)</span>
+</div>
+</aside>
+<!-- Interactive Force-Directed Canvas Simulation -->
+<div class="relative w-full h-full cursor-grab active:cursor-grabbing overflow-hidden bg-[#0a0d14]" id="viewport-canvas-wrapper">
+<!-- Coordinate Grid Gridlines Overlay -->
+<div class="absolute inset-0 pointer-events-none opacity-20" style="background-size: 40px 40px; background-image: linear-gradient(to right, #272a32 1px, transparent 1px), linear-gradient(to bottom, #272a32 1px, transparent 1px);"></div>
+<!-- SVG Neural Matrix Graph Layer -->
+<svg class="w-full h-full absolute inset-0 transform-gpu" id="graph-svg" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter height="140%" id="glow-cyan" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+<filter height="140%" id="glow-emerald" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<femerge>
+<femergenode in="blur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<g id="transform-group" transform="matrix(1 0 0 1 0 0)">
+<!-- Vector Connections (Semantic Bridges) -->
+<g id="edge-layer" stroke-linecap="round">
+<!-- Central Resource to Sub-resources -->
+<line stroke="#4cd7f6" stroke-opacity="0.55" stroke-width="2" x1="560" x2="420" y1="360" y2="280"></line>
+<line stroke="#4cd7f6" stroke-opacity="0.35" stroke-width="1.5" x1="560" x2="680" y1="360" y2="240"></line>
+<line stroke="#4edea3" stroke-opacity="0.45" stroke-width="2" x1="560" x2="480" y1="360" y2="520"></line>
+<line stroke="#4cd7f6" stroke-opacity="0.25" stroke-width="1" x1="560" x2="720" y1="360" y2="440"></line>
+<line stroke="#f59e0b" stroke-dasharray="3,3" stroke-opacity="0.3" stroke-width="1.5" x1="560" x2="350" y1="360" y2="420"></line>
+<!-- Project Interlinks -->
+<line stroke="#4edea3" stroke-opacity="0.5" stroke-width="1.5" x1="480" x2="330" y1="520" y2="580"></line>
+<line stroke="#4edea3" stroke-opacity="0.3" stroke-width="1" x1="480" x2="610" y1="520" y2="610"></line>
+<line stroke="#4edea3" stroke-opacity="0.25" stroke-width="1" x1="330" x2="240" y1="580" y2="490"></line>
+<!-- Area Interlinks -->
+<line stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1.5" x1="350" x2="260" y1="420" y2="330"></line>
+<line stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1" x1="350" x2="210" y1="420" y2="430"></line>
+<line stroke="#f59e0b" stroke-opacity="0.2" stroke-width="1" x1="260" x2="380" y1="330" y2="180"></line>
+<!-- Resource cluster satellite links -->
+<line stroke="#4cd7f6" stroke-opacity="0.4" stroke-width="1.5" x1="420" x2="380" y1="280" y2="180"></line>
+<line stroke="#4cd7f6" stroke-opacity="0.25" stroke-width="1" x1="420" x2="520" y1="280" y2="150"></line>
+<line stroke="#4cd7f6" stroke-opacity="0.3" stroke-width="1" x1="680" x2="810" y1="240" y2="210"></line>
+<line stroke="#4cd7f6" stroke-opacity="0.25" stroke-width="1" x1="680" x2="740" y1="240" y2="140"></line>
+<line stroke="#4cd7f6" stroke-opacity="0.2" stroke-width="1" x1="720" x2="840" y1="440" y2="390"></line>
+<!-- Archive Interlinks -->
+<line stroke="#c0c1ff" stroke-dasharray="4,2" stroke-opacity="0.35" stroke-width="1.2" x1="720" x2="860" y1="440" y2="520"></line>
+<line stroke="#c0c1ff" stroke-opacity="0.2" stroke-width="1" x1="860" x2="940" y1="520" y2="460"></line>
+<line stroke="#c0c1ff" stroke-opacity="0.3" stroke-width="1" x1="860" x2="920" y1="520" y2="600"></line>
+<line stroke="#c0c1ff" stroke-opacity="0.2" stroke-width="1" x1="610" x2="750" y1="610" y2="670"></line>
+</g>
+<!-- Graph Nodes Layer -->
+<g id="nodes-layer">
+<!-- CENTRAL ACTIVE NODE: Transformer Attention Paper -->
+<g class="graph-node cursor-pointer group active-inspect" data-id="res-882a" data-para="resource" data-title="Transformer Attention Paper [Res-882a]" transform="translate(560, 360)">
+<!-- Outer pulse ring -->
+<circle class="animate-ping" fill="#4cd7f6" fill-opacity="0.1" r="34" style="animation-duration: 3s;"></circle>
+<!-- Ambient target halo -->
+<circle fill="#4cd7f6" fill-opacity="0.25" filter="url(#glow-cyan)" r="26"></circle>
+<!-- Solid Node Core -->
+<circle fill="#4cd7f6" r="18" stroke="#0b0e15" stroke-width="3"></circle>
+<!-- Label Tag -->
+<rect fill="#10131a" fill-opacity="0.9" height="20" stroke="#4cd7f6" stroke-width="1" width="170" x="-85" y="24"></rect>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="11" font-weight="600" letter-spacing="0.05em" text-anchor="middle" x="0" y="38">Transformer Attention Paper</text>
+</g>
+<!-- Vector Embeddings Guide (Resource) -->
+<g class="graph-node cursor-pointer group" data-id="res-411" data-para="resource" data-title="Vector Embeddings Guide" transform="translate(420, 280)">
+<circle fill="#4cd7f6" fill-opacity="0.2" r="16"></circle>
+<circle fill="#4cd7f6" r="12" stroke="#0b0e15" stroke-width="2.5"></circle>
+<rect fill="#10131a" fill-opacity="0.85" height="18" width="160" x="-80" y="16"></rect>
+<text fill="#e1e2ec" font-family="JetBrains Mono" font-size="10" text-anchor="middle" x="0" y="29">Vector Embeddings Guide</text>
+</g>
+<!-- Rust Concurrency Recipes (Resource) -->
+<g class="graph-node cursor-pointer group" data-id="res-109" data-para="resource" data-title="Rust Concurrency Recipes" transform="translate(680, 240)">
+<circle fill="#4cd7f6" fill-opacity="0.2" r="14"></circle>
+<circle fill="#4cd7f6" r="10" stroke="#0b0e15" stroke-width="2"></circle>
+<text fill="#bcc9cd" font-family="JetBrains Mono" font-size="10" text-anchor="start" x="14" y="4">Rust Concurrency Recipes</text>
+</g>
+<!-- LLM Context Window Scaling (Resource Satellite) -->
+<g class="graph-node cursor-pointer group" data-id="res-994" data-para="resource" data-title="LLM Context Window Scaling" transform="translate(520, 150)">
+<circle fill="#4cd7f6" r="7" stroke="#0b0e15" stroke-width="1.5"></circle>
+<text fill="#869397" font-family="JetBrains Mono" font-size="9" text-anchor="start" x="10" y="3">Context Scaling v2</text>
+</g>
+<!-- LoRA Fine-Tuning Benchmarks (Resource Satellite) -->
+<g class="graph-node cursor-pointer group" data-id="res-312" data-para="resource" data-title="LoRA Fine-Tuning Benchmarks" transform="translate(810, 210)">
+<circle fill="#4cd7f6" r="8" stroke="#0b0e15" stroke-width="1.5"></circle>
+<text fill="#869397" font-family="JetBrains Mono" font-size="9" text-anchor="start" x="12" y="3">LoRA Benchmarks</text>
+</g>
+<!-- PROJECT: Autonomous Agent System -->
+<g class="graph-node cursor-pointer group" data-id="proj-901" data-para="project" data-title="Autonomous Agent System" transform="translate(480, 520)">
+<circle fill="#4edea3" fill-opacity="0.2" filter="url(#glow-emerald)" r="22"></circle>
+<circle fill="#4edea3" r="15" stroke="#0b0e15" stroke-width="2.5"></circle>
+<rect fill="#10131a" fill-opacity="0.85" height="18" width="170" x="-85" y="20"></rect>
+<text fill="#4edea3" font-family="JetBrains Mono" font-size="10" font-weight="600" text-anchor="middle" x="0" y="33">Autonomous Agent System</text>
+</g>
+<!-- PROJECT: Q3 Launch Plan -->
+<g class="graph-node cursor-pointer group" data-id="proj-332" data-para="project" data-title="Q3 Launch Plan" transform="translate(330, 580)">
+<circle fill="#4edea3" fill-opacity="0.2" r="13"></circle>
+<circle fill="#4edea3" r="10" stroke="#0b0e15" stroke-width="2"></circle>
+<text fill="#bcc9cd" font-family="JetBrains Mono" font-size="10" text-anchor="start" x="14" y="4">Q3 Launch Plan</text>
+</g>
+<!-- PROJECT: Personal Brand OS -->
+<g class="graph-node cursor-pointer group" data-id="proj-114" data-para="project" data-title="Personal Brand OS" transform="translate(610, 610)">
+<circle fill="#4edea3" r="11" stroke="#0b0e15" stroke-width="2"></circle>
+<text fill="#bcc9cd" font-family="JetBrains Mono" font-size="10" text-anchor="start" x="14" y="3">Personal Brand OS</text>
+</g>
+<!-- AREA: Distributed Systems Architecture -->
+<g class="graph-node cursor-pointer group" data-id="area-501" data-para="area" data-title="Distributed Systems Architecture" transform="translate(350, 420)">
+<circle fill="#f59e0b" fill-opacity="0.25" r="18"></circle>
+<circle fill="#f59e0b" r="13" stroke="#0b0e15" stroke-width="2.5"></circle>
+<text fill="#f59e0b" font-family="JetBrains Mono" font-size="10" font-weight="500" text-anchor="end" x="-15" y="-18">Distributed Systems</text>
+</g>
+<!-- AREA: Health & Biometrics -->
+<g class="graph-node cursor-pointer group" data-id="area-209" data-para="area" data-title="Health &amp; Biometrics" transform="translate(260, 330)">
+<circle fill="#f59e0b" r="12" stroke="#0b0e15" stroke-width="2"></circle>
+<text fill="#bcc9cd" font-family="JetBrains Mono" font-size="10" text-anchor="end" x="-12" y="4">Health &amp; Biometrics</text>
+</g>
+<!-- AREA: Financial Freedom -->
+<g class="graph-node cursor-pointer group" data-id="area-884" data-para="area" data-title="Financial Freedom" transform="translate(210, 430)">
+<circle fill="#f59e0b" r="10" stroke="#0b0e15" stroke-width="1.5"></circle>
+<text fill="#869397" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="-12" y="4">Financial Freedom</text>
+</g>
+<!-- ARCHIVE: 2023 Tax Returns -->
+<g class="graph-node cursor-pointer group" data-id="arch-023" data-para="archive" data-title="2023 Tax Returns" transform="translate(860, 520)">
+<circle fill="#c0c1ff" fill-opacity="0.25" r="12"></circle>
+<circle fill="#c0c1ff" r="9" stroke="#0b0e15" stroke-width="2"></circle>
+<text fill="#c0c1ff" font-family="JetBrains Mono" font-size="10" text-anchor="start" x="14" y="4">2023 Tax Returns</text>
+</g>
+<!-- ARCHIVE: Legacy React Refactor -->
+<g class="graph-node cursor-pointer group" data-id="arch-904" data-para="archive" data-title="Legacy React Refactor" transform="translate(920, 600)">
+<circle fill="#c0c1ff" r="10" stroke="#0b0e15" stroke-width="1.5"></circle>
+<text fill="#869397" font-family="JetBrains Mono" font-size="9" text-anchor="start" x="12" y="3">Legacy React Refactor</text>
+</g>
+</g>
+</g>
+</svg>
+<!-- Bottom Mini-Map & Canvas Compass -->
+<div class="absolute bottom-4 left-4 z-10 flex items-end gap-3 pointer-events-none">
+<!-- Coordinate HUD Coordinates -->
+<div class="bg-surface-container-low px-space-md py-1.5 flex items-center gap-4 text-on-surface-variant pointer-events-auto">
+<span class="font-label-sm text-label-sm uppercase">POS: <span class="text-primary font-mono" id="coord-hud">X: 560 · Y: 360</span></span>
+<span class="font-label-sm text-label-sm uppercase">SCALE: <span class="text-on-surface font-mono" id="zoom-hud">100%</span></span>
+</div>
+<!-- Radar Mini-map Widget -->
+<div class="w-32 h-24 bg-surface-container-lowest/90 border-t border-r border-surface-container-high p-1 hidden sm:block pointer-events-auto relative">
+<div class="w-full h-full relative bg-surface-container-low/40 overflow-hidden">
+<!-- Simulated graph dots in mini map -->
+<div class="absolute w-1.5 h-1.5 bg-primary top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute w-1 h-1 bg-tertiary top-2/3 left-1/3"></div>
+<div class="absolute w-1 h-1 bg-[#f59e0b] top-1/3 left-1/4"></div>
+<div class="absolute w-1 h-1 bg-secondary bottom-1/4 right-1/4"></div>
+<!-- Viewport bounds box -->
+<div class="absolute inset-2 border border-primary/40 bg-primary/5 pointer-events-none"></div>
+</div>
+<span class="absolute top-1 left-2 font-label-sm text-[8px] text-outline uppercase tracking-widest">MINI RADAR</span>
+</div>
+</div>
+</div>
+<!-- Active Node Telemetry Inspector / Quick Detail Drawer -->
+<aside class="w-96 max-w-full bg-surface-container-low flex flex-col justify-between shrink-0 z-30 transition-all duration-200 ease-in-out shadow-2xl overflow-y-auto" id="node-inspector-drawer">
+<!-- Drawer Header -->
+<div class="flex flex-col">
+<div class="px-space-md py-space-sm bg-surface-container-high flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Active Inspector Node</span>
+</div>
+<button class="w-6 h-6 flex items-center justify-center text-outline hover:text-on-surface" id="close-inspector-btn">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Node Meta Header Details -->
+<div class="p-space-md flex flex-col gap-3 bg-surface-container">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 bg-primary/10 text-primary font-label-sm text-label-sm font-semibold uppercase">
+              Resource Node
+            </span>
+<span class="font-label-sm text-label-sm text-outline">ID: RES-882A</span>
+</div>
+<h1 class="font-headline-md text-headline-md text-on-surface leading-snug">
+            Transformer Attention Paper
+          </h1>
+<div class="flex items-center gap-4 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">calendar_today</span> 2024-03-12</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">link</span> 6 Bridges</span>
+<span class="flex items-center gap-1 text-tertiary"><span class="material-symbols-outlined text-[14px]">verified</span> Vector Synced</span>
+</div>
+</div>
+<!-- AI Synthetic Summary -->
+<div class="p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">psychology</span>
+              AI Synthetic Excerpt
+            </span>
+<span class="font-label-sm text-label-sm text-tertiary">ChromaDB Embedding</span>
+</div>
+<div class="p-space-sm bg-surface-container-lowest font-body-sm text-body-sm text-on-surface leading-relaxed">
+            "Core foundational paper explaining self-attention mechanism and multi-head projection layers in LLMs. Outlines scaled dot-product calculations and positional sinusoidal encodings."
+          </div>
+</div>
+<!-- Smart Cortex Tags -->
+<div class="px-space-md py-space-sm flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Semantic Index Tags</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-label-sm text-label-sm">#machine-learning</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-label-sm text-label-sm">#neural-nets</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-label-sm text-label-sm">#deep-learning</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-label-sm text-label-sm">#transformers</span>
+</div>
+</div>
+<!-- Semantic Bridge Affinity (Connected Nodes) -->
+<div class="p-space-md flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Connected Nodes (k-NN)</span>
+<span class="font-label-sm text-label-sm text-outline">Sim Score</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<!-- Node 1 -->
+<div class="p-2 bg-surface-container-lowest flex items-center justify-between hover:bg-surface-container-high transition-none cursor-pointer">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-1.5 h-1.5 bg-primary shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Vector Embeddings Guide</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold ml-2">94%</span>
+</div>
+<!-- Node 2 -->
+<div class="p-2 bg-surface-container-lowest flex items-center justify-between hover:bg-surface-container-high transition-none cursor-pointer">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-1.5 h-1.5 bg-tertiary shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Autonomous Agent System</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold ml-2">88%</span>
+</div>
+<!-- Node 3 -->
+<div class="p-2 bg-surface-container-lowest flex items-center justify-between hover:bg-surface-container-high transition-none cursor-pointer">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-1.5 h-1.5 bg-primary shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Rust Concurrency Recipes</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-2">79%</span>
+</div>
+<!-- Node 4 -->
+<div class="p-2 bg-surface-container-lowest flex items-center justify-between hover:bg-surface-container-high transition-none cursor-pointer">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-1.5 h-1.5 bg-[#f59e0b] shrink-0"></span>
+<span class="font-body-sm text-body-sm text-on-surface truncate">Distributed Systems Architecture</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-2">76%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Button Terminal Deck -->
+<div class="p-space-md bg-surface-container-high flex flex-col gap-2 mt-auto">
+<button class="w-full py-2.5 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider font-semibold flex items-center justify-center gap-2 hover:bg-primary-fixed hover:text-on-primary-fixed transition-none">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+<span>Open Note in Markdown</span>
+</button>
+<button class="w-full py-2 bg-transparent text-primary hover:bg-surface-container hover:text-on-surface font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-2 transition-none">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+<span>Explore in RAG Query</span>
+</button>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  (function initGraphCockpit() {
+    // Zoom and pan state
+    let scale = 1.0;
+    let pointX = 0;
+    let pointY = 0;
+    let isPanning = false;
+    let startX = 0;
+    let startY = 0;
+
+    const transformGroup = document.getElementById('transform-group');
+    const viewport = document.getElementById('viewport-canvas-wrapper');
+    const zoomHud = document.getElementById('zoom-hud');
+    const coordHud = document.getElementById('coord-hud');
+    const inspectorDrawer = document.getElementById('node-inspector-drawer');
+    const toggleInspectorBtn = document.getElementById('toggle-inspector');
+    const closeInspectorBtn = document.getElementById('close-inspector-btn');
+
+    function updateTransform() {
+      if (transformGroup) {
+        transformGroup.setAttribute('transform', `matrix(${scale} 0 0 ${scale} ${pointX} ${pointY})`);
+      }
+      if (zoomHud) {
+        zoomHud.textContent = Math.round(scale * 100) + '%';
+      }
+      if (coordHud) {
+        coordHud.textContent = `X: ${Math.round(-pointX + 560)} · Y: ${Math.round(-pointY + 360)}`;
+      }
+    }
+
+    // Zoom Controls
+    document.getElementById('zoom-in')?.addEventListener('click', () => {
+      scale = Math.min(scale * 1.25, 3.0);
+      updateTransform();
+    });
+
+    document.getElementById('zoom-out')?.addEventListener('click', () => {
+      scale = Math.max(scale / 1.25, 0.35);
+      updateTransform();
+    });
+
+    document.getElementById('zoom-reset')?.addEventListener('click', () => {
+      scale = 1.0;
+      pointX = 0;
+      pointY = 0;
+      updateTransform();
+    });
+
+    // Mouse Pan Simulation
+    viewport?.addEventListener('mousedown', (e) => {
+      if (e.target.closest('.graph-node') || e.target.closest('button') || e.target.closest('input')) return;
+      isPanning = true;
+      startX = e.clientX - pointX;
+      startY = e.clientY - pointY;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isPanning) return;
+      pointX = e.clientX - startX;
+      pointY = e.clientY - startY;
+      updateTransform();
+    });
+
+    window.addEventListener('mouseup', () => {
+      isPanning = false;
+    });
+
+    // Mouse Wheel Zoom
+    viewport?.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const zoomFactor = e.deltaY < 0 ? 1.08 : 0.92;
+      scale = Math.min(Math.max(scale * zoomFactor, 0.35), 3.0);
+      updateTransform();
+    }, { passive: false });
+
+    // Slider readouts
+    const bindSlider = (sliderId, labelId, prefix = '', suffix = '') => {
+      const slider = document.getElementById(sliderId);
+      const label = document.getElementById(labelId);
+      slider?.addEventListener('input', (e) => {
+        if (label) label.textContent = `${prefix}${e.target.value}${suffix}`;
+      });
+    };
+
+    bindSlider('slider-sim', 'sim-val');
+    bindSlider('slider-knn', 'knn-val');
+    bindSlider('slider-repulsion', 'repulsion-val');
+    bindSlider('slider-gravity', 'gravity-val');
+
+    // Drawer Inspector Toggles
+    toggleInspectorBtn?.addEventListener('click', () => {
+      if (inspectorDrawer) {
+        inspectorDrawer.classList.toggle('hidden');
+      }
+    });
+
+    closeInspectorBtn?.addEventListener('click', () => {
+      if (inspectorDrawer) {
+        inspectorDrawer.classList.add('hidden');
+      }
+    });
+
+    // Node Click Handlers
+    const nodes = document.querySelectorAll('.graph-node');
+    nodes.forEach(node => {
+      node.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nodes.forEach(n => n.classList.remove('active-inspect'));
+        node.classList.add('active-inspect');
+        if (inspectorDrawer && inspectorDrawer.classList.contains('hidden')) {
+          inspectorDrawer.classList.remove('hidden');
+        }
+      });
+    });
+
+    // 2D / 3D switcher simulation
+    const btn2D = document.getElementById('view-2d-btn');
+    const btn3D = document.getElementById('view-3d-btn');
+    btn3D?.addEventListener('click', () => {
+      btn3D.className = "font-label-sm text-label-sm px-2 py-0.5 bg-primary text-on-primary font-semibold transition-none";
+      btn2D.className = "font-label-sm text-label-sm px-2 py-0.5 bg-transparent text-on-surface-variant hover:text-primary transition-none";
+    });
+    btn2D?.addEventListener('click', () => {
+      btn2D.className = "font-label-sm text-label-sm px-2 py-0.5 bg-primary text-on-primary font-semibold transition-none";
+      btn3D.className = "font-label-sm text-label-sm px-2 py-0.5 bg-transparent text-on-surface-variant hover:text-primary transition-none";
+    });
+
+    // PARA Filter toggle clicks
+    const paraButtons = document.querySelectorAll('.para-filter-btn');
+    paraButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('opacity-40');
+      });
+    });
+  })();
+</script></main></div></body></html>
